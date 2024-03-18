@@ -4,6 +4,9 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -11221,8 +11224,11 @@ h5,
 
 .navbar-brand {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 30px;
+  font-family: 'Poppins' Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.2;
+  position: relative;
+  right: 2rem;
 }
 .navbar-brand span {
   font-size: 10px;
@@ -11262,9 +11268,9 @@ h5,
 }
 .slider-text .subheading {
   font-size: 40px;
-  color: var(--white);
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: 700;
+  font-family: Poppins Verdana, Geneva, Tahoma, sans-serif;
 }
 .slider-text h1 {
   font-size: 55px;
@@ -12252,7 +12258,8 @@ textarea.form-control {
   display: block;
   margin-bottom: 5px;
   color: #f15d30;
-  font-family: "Arizonia", cursive;
+  font-weight: 500;
+  font-family: 'Poppins' Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .heading-section h2 {
