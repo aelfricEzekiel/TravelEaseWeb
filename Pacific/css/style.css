@@ -11026,6 +11026,8 @@ h5,
     color: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    position: relative;
+    left: 1rem;
   }
 }
 .ftco-navbar-light .navbar-nav {
@@ -11228,7 +11230,7 @@ h5,
   font-family: 'Poppins' Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.2;
   position: relative;
-  right: 2rem;
+  right: 10rem;
 }
 .navbar-brand span {
   font-size: 10px;
