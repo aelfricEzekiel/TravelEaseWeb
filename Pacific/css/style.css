@@ -4764,7 +4764,10 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  position: relative;
+  right: 3rem;
 }
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
@@ -11229,8 +11232,6 @@ h5,
   font-size: 30px;
   font-family: 'Poppins' Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.2;
-  position: relative;
-  right: 10rem;
 }
 .navbar-brand span {
   font-size: 10px;
