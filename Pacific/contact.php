@@ -23,12 +23,15 @@
 
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
+  <?php 
+    echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+  ?>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">TravelEase<span>Travel Agency</span></a>
+      <a class="navbar-brand" href="index.php">TravelEase<span>Travel Agency</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
@@ -36,12 +39,12 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-          <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
-          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="destination.php" class="nav-link">Destination</a></li>
+          <li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
+          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
+          <li class="nav-item active"><a href="contact.php" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -54,150 +57,83 @@
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
         <div class="col-md-9 ftco-animate pb-5 text-center">
           <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                  class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
-          <h1 class="mb-0 bread">Blog</h1>
+                  class="fa fa-chevron-right"></i></a></span> <span>Contact us <i
+                class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-0 bread">Contact us</h1>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ftco-section">
+  <section class="ftco-section ftco-no-pb contact-section mb-4">
     <div class="container">
-      <div class="row d-flex">
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">11</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2020</span>
-                  <span class="mos">September</span>
-                </div>
-              </div>
-              <h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary">Read more</a></p>
+      <div class="row d-flex contact-info">
+        <div class="col-md-3 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-map-marker"></span>
             </div>
+            <h3 class="mb-2">Address</h3>
+            <p>SM City Iloilo, Travel Ease Agency 2nd Floor, Mandurriao Iloilo City, Philippines</p>
           </div>
         </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">11</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2020</span>
-                  <span class="mos">September</span>
-                </div>
-              </div>
-              <h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary">Read more</a></p>
+        <div class="col-md-3 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-phone"></span>
             </div>
+            <h3 class="mb-2">Contact Number</h3>
+            <p><a href="tel://1234567920">+63 989 321 5645</a></p>
           </div>
         </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">11</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2020</span>
-                  <span class="mos">September</span>
-                </div>
-              </div>
-              <h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary">Read more</a></p>
+        <div class="col-md-3 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-paper-plane"></span>
             </div>
+            <h3 class="mb-2">Email Address</h3>
+            <p><a href="mailto:info@yoursite.com">travelEase@gmail.com</a></p>
           </div>
         </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">11</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2020</span>
-                  <span class="mos">September</span>
-                </div>
-              </div>
-              <h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary">Read more</a></p>
+        <div class="col-md-3 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-globe"></span>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">11</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2020</span>
-                  <span class="mos">September</span>
-                </div>
-              </div>
-              <h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary">Read more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_6.jpg');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">11</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2020</span>
-                  <span class="mos">September</span>
-                </div>
-              </div>
-              <h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary">Read more</a></p>
-            </div>
+            <h3 class="mb-2">Website</h3>
+            <p><a href="#">www.travelease.com</a></p>
           </div>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col text-center">
-          <div class="block-27">
-            <ul>
-              <li><a href="#">&lt;</a></li>
-              <li class="active"><span>1</span></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">&gt;</a></li>
-            </ul>
-          </div>
+    </div>
+  </section>
+
+  <section class="ftco-section contact-section ftco-no-pt">
+    <div class="container">
+      <div class="row block-9">
+        <div class="col-md-6 order-md-last d-flex">
+          <form action="#" class="bg-light p-5 contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            </div>
+          </form>
+
+        </div>
+
+        <div class="col-md-6 d-flex">
+          <div id="map" class="bg-white"></div>
         </div>
       </div>
     </div>
@@ -217,6 +153,7 @@
       </div>
     </div>
   </section>
+
 
   <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
     <div class="container">

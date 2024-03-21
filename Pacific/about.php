@@ -22,36 +22,39 @@
 
   <link rel="stylesheet" href="css/flaticon.css" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <?php
+  echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+  ?>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">TravelEase<span>Travel Agency</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.php">TravelEase<span>Travel Agency</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.php" class="nav-link">Home</a>
           </li>
           <li class="nav-item active">
-            <a href="about.html" class="nav-link">About</a>
+            <a href="about.php" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="destination.html" class="nav-link">Destination</a>
+            <a href="destination.php" class="nav-link">Destination</a>
           </li>
           <li class="nav-item">
-            <a href="hotel.html" class="nav-link">Hotel</a>
+            <a href="hotel.php" class="nav-link">Hotel</a>
           </li>
           <li class="nav-item">
-            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="blog.php" class="nav-link">Blog</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.php" class="nav-link">Contact</a>
           </li>
         </ul>
       </div>
@@ -167,8 +170,7 @@
     <div class="container py-md-5">
       <div class="row py-md-5">
         <div class="col-md d-flex align-items-center justify-content-center">
-          <a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4"
-            class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+          <a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
             <span class="fa fa-play"></span>
           </a>
         </div>
@@ -182,8 +184,7 @@
         <div class="col-md-12 about-intro">
           <div class="row">
             <div class="col-md-6 d-flex align-items-stretch">
-              <div class="img d-flex w-100 align-items-center justify-content-center"
-                style="background-image: url(images/about-1.jpg)"></div>
+              <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image: url(images/about-1.jpg)"></div>
             </div>
             <div class="col-md-6 pl-md-5 py-5">
               <div class="row justify-content-start pb-3">
@@ -438,8 +439,7 @@
                       5645</span></a>
                 </li>
                 <li>
-                  <a href="#"><span class="icon fa fa-paper-plane"></span><span
-                      class="text">travelEase@gmail.com</span></a>
+                  <a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">travelEase@gmail.com</span></a>
                 </li>
               </ul>
             </div>
@@ -466,8 +466,7 @@
   <div id="ftco-loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
     </svg>
   </div>
 
@@ -483,8 +482,7 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 </body>

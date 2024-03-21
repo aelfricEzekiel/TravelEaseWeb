@@ -5,46 +5,47 @@
 	<title>TravelEase</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/animate.css" type="text/css">
 
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" <link rel="stylesheet" href="css/bootstrap-datepicker.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.timepicker.css" type="text/css">
 
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
-
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/flaticon.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
 
 	<!-- Font Awesome Links -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<?php
+	echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+	?>
+
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">TravelEase<span>Travel Agency</span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand" href="index.php">TravelEase<span>Travel Agency</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu">Menu</span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-					<li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.php" class="nav-link">Destination</a></li>
+					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
+					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,8 +61,7 @@
 					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
 					<p class="caps">Travel to the any corner of the world, without going around in circles</p>
 				</div>
-				<a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4"
-					class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+				<a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
 					<span class="fa fa-play"></span>
 				</a>
 			</div>
@@ -75,16 +75,14 @@
 					<div class="ftco-search d-flex justify-content-center">
 						<div class="row">
 							<div class="col-md-12 nav-link-wrap">
-								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist"
-									aria-orientation="vertical">
+								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 									<a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Search Tour</a>
 									<a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Hotel</a>
 								</div>
 							</div>
 							<div class="col-md-12 tab-wrap">
 								<div class="tab-content" id="v-pills-tabContent">
-									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
-										aria-labelledby="v-pills-nextgen-tab">
+									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
 										<form action="#" class="search-property-1">
 											<div class="row no-gutters">
 												<div class="col-md d-flex">
@@ -101,8 +99,7 @@
 														<label for="#">Check-in date</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date"
-																placeholder="Check In Date">
+															<input type="text" class="form-control checkin_date" placeholder="Check In Date">
 														</div>
 													</div>
 												</div>
@@ -111,8 +108,7 @@
 														<label for="#">Check-out date</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date"
-																placeholder="Check Out Date">
+															<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
 														</div>
 													</div>
 												</div>
@@ -121,8 +117,7 @@
 														<label for="#">Price Limit</label>
 														<div class="form-field">
 															<div class="select-wrap">
-																<div class="icon"><span
-																		class="fa fa-chevron-down"></span></div>
+																<div class="icon"><span class="fa fa-chevron-down"></span></div>
 																<select name="" id="" class="form-control">
 																	<option value="">$100</option>
 																	<option value="">$10,000</option>
@@ -153,8 +148,7 @@
 											</div>
 										</form>
 									</div>
-									<div class="tab-pane fade" id="v-pills-2" role="tabpanel"
-										aria-labelledby="v-pills-performance-tab">
+									<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
 										<form action="#" class="search-property-1">
 											<div class="row no-gutters">
 												<div class="col-lg d-flex">
@@ -162,8 +156,7 @@
 														<label for="#">Destination</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control"
-																placeholder="Search place">
+															<input type="text" class="form-control" placeholder="Search place">
 														</div>
 													</div>
 												</div>
@@ -172,8 +165,7 @@
 														<label for="#">Check-in date</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date"
-																placeholder="Check In Date">
+															<input type="text" class="form-control checkin_date" placeholder="Check In Date">
 														</div>
 													</div>
 												</div>
@@ -182,8 +174,7 @@
 														<label for="#">Check-out date</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date"
-																placeholder="Check Out Date">
+															<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
 														</div>
 													</div>
 												</div>
@@ -192,8 +183,7 @@
 														<label for="#">Price Limit</label>
 														<div class="form-field">
 															<div class="select-wrap">
-																<div class="icon"><span
-																		class="fa fa-chevron-down"></span></div>
+																<div class="icon"><span class="fa fa-chevron-down"></span></div>
 																<select name="" id="" class="form-control">
 																	<option value="">$100</option>
 																	<option value="">$10,000</option>
@@ -217,8 +207,7 @@
 												<div class="col-lg d-flex">
 													<div class="form-group d-flex w-100 border-0">
 														<div class="form-field w-100 align-items-center d-flex">
-															<input type="submit" value="Search"
-																class="align-self-stretch form-control btn btn-primary p-0">
+															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary p-0">
 														</div>
 													</div>
 												</div>
@@ -253,10 +242,8 @@
 				<div class="col-md-6">
 					<div class="row">
 						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-							<div class="services services-1 color-1 d-block img"
-								style="background-image: url(images/services-1.jpg);">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="flaticon-paragliding"></span></div>
+							<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Activities</h3>
 									<p>A small river named Duden flows by their place and supplies it with the necessary
@@ -265,10 +252,8 @@
 							</div>
 						</div>
 						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-							<div class="services services-1 color-2 d-block img"
-								style="background-image: url(images/services-2.jpg);">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="flaticon-route"></span></div>
+							<div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Travel Arrangements</h3>
 									<p>A small river named Duden flows by their place and supplies it with the necessary
@@ -277,10 +262,8 @@
 							</div>
 						</div>
 						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-							<div class="services services-1 color-3 d-block img"
-								style="background-image: url(images/services-3.jpg);">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="flaticon-tour-guide"></span></div>
+							<div class="services services-1 color-3 d-block img" style="background-image: url(images/services-3.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Private Guide</h3>
 									<p>A small river named Duden flows by their place and supplies it with the necessary
@@ -289,10 +272,8 @@
 							</div>
 						</div>
 						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-							<div class="services services-1 color-4 d-block img"
-								style="background-image: url(images/services-4.jpg);">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="flaticon-map"></span></div>
+							<div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Location Manager</h3>
 									<p>A small river named Duden flows by their place and supplies it with the necessary
@@ -322,8 +303,7 @@
 					<div class="carousel-destination owl-carousel ftco-animate">
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/boracay.webp);">
+								<a href="destination.html" class="img" style="background-image: url(images/boracay.webp);">
 									<div class="text">
 										<h3>Boracay, Aklan</h3>
 										<span>10 Tours</span>
@@ -333,8 +313,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Siargao.jpg);">
+								<a href="destination.html" class="img" style="background-image: url(images/Siargao.jpg);">
 									<div class="text">
 										<h3>Siargao Island, Surigao del Norte</h3>
 										<span>15 Tours</span>
@@ -344,8 +323,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Coron\ Island\ Palawan.jpg);">
+								<a href="destination.html" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg);">
 									<div class="text">
 										<h3>Coron Island, Palawan</h3>
 										<span>5 Tours</span>
@@ -355,8 +333,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg);">
+								<a href="destination.html" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg);">
 									<div class="text">
 										<h3>Calle Crisologo, Vigan</h3>
 										<span>8 Tours</span>
@@ -366,8 +343,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Intramuros\ Manila.avif);">
+								<a href="destination.html" class="img" style="background-image: url(images/Intramuros\ Manila.avif);">
 									<div class="text">
 										<h3>Fort Santiago Intramuros, Manila</h3>
 										<span>9 Tours</span>
@@ -377,8 +353,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Taal\ Volcano.webp);">
+								<a href="destination.html" class="img" style="background-image: url(images/Taal\ Volcano.webp);">
 									<div class="text">
 										<h3>Taal Volcano, Batangas</h3>
 										<span>10 Tours</span>
@@ -388,8 +363,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg);">
+								<a href="destination.html" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg);">
 									<div class="text">
 										<h3>Kawasan Falls, Cebu</h3>
 										<span>12 Tours</span>
@@ -399,8 +373,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Mt.\ Pulag.jpg);">
+								<a href="destination.html" class="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
 									<div class="text">
 										<h3>Mt. Pulag, Benguet</h3>
 										<span>7 Tours</span>
@@ -410,8 +383,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img"
-									style="background-image: url(images/Chocolate\ Hills.jpg);">
+								<a href="destination.html" class="img" style="background-image: url(images/Chocolate\ Hills.jpg);">
 									<div class="text">
 										<h3>Chocolate Hills, Bohol</h3>
 										<span>12 Tours</span>
@@ -605,8 +577,7 @@
 		<div class="container py-md-5">
 			<div class="row py-md-5">
 				<div class="col-md d-flex align-items-center justify-content-center">
-					<a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4"
-						class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
 						<span class="fa fa-play"></span>
 					</a>
 				</div>
@@ -620,8 +591,7 @@
 				<div class="col-md-12 about-intro">
 					<div class="row">
 						<div class="col-md-6 d-flex align-items-stretch">
-							<div class="img d-flex w-100 align-items-center justify-content-center"
-								style="background-image:url(images/about-1.jpg);">
+							<div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/about-1.jpg);">
 							</div>
 						</div>
 						<div class="col-md-6 pl-md-5 py-5">
@@ -782,8 +752,7 @@
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.html" class="block-20"
-							style="background-image: url('images/image_1.jpg');">
+						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -803,8 +772,7 @@
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.html" class="block-20"
-							style="background-image: url('images/image_2.jpg');">
+						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -824,8 +792,7 @@
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20"
-							style="background-image: url('images/image_3.jpg');">
+						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -912,8 +879,7 @@
 										TravelEase Agency 2nd Floor, Mandurriao Iloilo City, Philippines</span></li>
 								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+63 989 321
 											5645</span></a></li>
-								<li><a href="#"><span class="icon fa fa-paper-plane"></span><span
-											class="text">travelEase@gmail.com</span></a></li>
+								<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">travelEase@gmail.com</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -924,7 +890,9 @@
 
 					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | TravelEase
+						<script>
+							document.write(new Date().getFullYear());
+						</script> All rights reserved | TravelEase
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 				</div>
@@ -937,8 +905,7 @@
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
 		</svg></div>
 
 
@@ -954,8 +921,7 @@
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/scrollax.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 
