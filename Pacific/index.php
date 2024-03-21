@@ -25,7 +25,7 @@
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 	<?php
-		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+	echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
 	?>
 
 </head>
@@ -46,7 +46,10 @@
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-				</ul>	
+					<li class="nav-item"><a href="#" class="nav-link">Accounts<i class="bi bi-chevron-down"></i></a>
+						
+					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -373,7 +376,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.php"phpclass="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
+								<a href="destination.php" phpclass="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
 									<div class="text">
 										<h3>Mt. Pulag, Benguet</h3>
 										<span>7 Tours</span>
