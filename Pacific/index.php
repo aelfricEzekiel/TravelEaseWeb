@@ -46,7 +46,7 @@
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-				</ul>
+				</ulphp
 			</div>
 		</div>
 	</nav>
@@ -303,7 +303,7 @@
 					<div class="carousel-destination owl-carousel ftco-animate">
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/boracay.webp);">
+								<a href="destination.php" class="img" style="background-image: url(images/boracay.webp);">
 									<div class="text">
 										<h3>Boracay, Aklan</h3>
 										<span>10 Tours</span>
@@ -313,7 +313,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Siargao.jpg);">
+								<a href="destination.php" class="img" style="background-image: url(images/Siargao.jpg);">
 									<div class="text">
 										<h3>Siargao Island, Surigao del Norte</h3>
 										<span>15 Tours</span>
@@ -323,7 +323,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg);">
+								<a href="destination.php" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg);">
 									<div class="text">
 										<h3>Coron Island, Palawan</h3>
 										<span>5 Tours</span>
@@ -333,7 +333,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg);">
+								<a href="destination.php" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg);">
 									<div class="text">
 										<h3>Calle Crisologo, Vigan</h3>
 										<span>8 Tours</span>
@@ -343,7 +343,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Intramuros\ Manila.avif);">
+								<a href="destination.php" class="img" style="background-image: url(images/Intramuros\ Manila.avif);">
 									<div class="text">
 										<h3>Fort Santiago Intramuros, Manila</h3>
 										<span>9 Tours</span>
@@ -353,7 +353,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Taal\ Volcano.webp);">
+								<a href="destination.php" class="img" style="background-image: url(images/Taal\ Volcano.webp);">
 									<div class="text">
 										<h3>Taal Volcano, Batangas</h3>
 										<span>10 Tours</span>
@@ -363,7 +363,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg);">
+								<a href="destination.php" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg);">
 									<div class="text">
 										<h3>Kawasan Falls, Cebu</h3>
 										<span>12 Tours</span>
@@ -373,7 +373,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.html" class="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
+								<a href="destination.php"phpclass="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
 									<div class="text">
 										<h3>Mt. Pulag, Benguet</h3>
 										<span>7 Tours</span>
@@ -414,7 +414,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">4 Days Tour</span>
-							<h3><a href="destination.html">Boracay Island</a></h3>
+							<h3><a href="destination.php">Boracay Island</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Aklan, Western Visayas,
 								Philippines</p>
 							<ul>
@@ -432,7 +432,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">3 Days Tour</span>
-							<h3><a href="destination.html">Siargao Island</a></h3>
+							<h3><a href="destination.php">Siargao Island</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Surigao del Norte, Ilocos Sur,
 								Philippines</p>
 							<ul>
@@ -450,7 +450,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">3 Days Tour</span>
-							<h3><a href="destination.html">Coron Island</a></h3>
+							<h3><a href="destination.php">Coron Island</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Coron, Palawan, Philippines</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -468,7 +468,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">3 Days Tour</span>
-							<h3><a href="destination.html">Calle Crisologo</a></h3>
+							<h3><a href="destination.php">Calle Crisologo</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Vigan, Ilocos Sur, Philippines
 							</p>
 							<ul>
@@ -486,7 +486,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">4 Days Tour</span>
-							<h3><a href="destination.html">Fort Santiago</a></h3>
+							<h3><a href="destination.php">Fort Santiago</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Intramuros, Metro Manila,
 								Philippines</p>
 							<ul>
@@ -504,7 +504,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">1 Days Tour</span>
-							<h3><a href="destination.html">Taal Volcano</a></h3>
+							<h3><a href="destination.php">Taal Volcano</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Talisay and San Nicolas,
 								Batangas, Philippines</p>
 							<ul>
@@ -522,7 +522,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">2 Days Tour</span>
-							<h3><a href="destination.html">Kawasan Falls</a></h3>
+							<h3><a href="destination.php">Kawasan Falls</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Badian, Cebu, Philippines</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -539,7 +539,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">3 Days Tour</span>
-							<h3><a href="destination.html">Mt. Pulag</a></h3>
+							<h3><a href="destination.php">Mt. Pulag</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Benguet, Cordillera
 								Administrative Region, Philippines</p>
 							<ul>
@@ -557,7 +557,7 @@
 						</a>
 						<div class="text p-4">
 							<span class="days">3 Days Tour</span>
-							<h3><a href="destination.html">Chocolate Hills</a></h3>
+							<h3><a href="destination.php">Chocolate Hills</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Bohol Province, Bohol,
 								Philippines</p>
 							<ul>
@@ -752,7 +752,7 @@
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+						<a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -772,7 +772,7 @@
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+						<a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -792,7 +792,7 @@
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+						<a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
