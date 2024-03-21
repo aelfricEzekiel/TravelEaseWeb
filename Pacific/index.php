@@ -14,7 +14,7 @@
 
 	<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" <link rel="stylesheet" href="css/bootstrap-datepicker.css" type="text/css">
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.timepicker.css" type="text/css">
 
 	<link rel="stylesheet" href="css/flaticon.css" type="text/css">
