@@ -25,7 +25,7 @@
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 	<?php
-	echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
 	?>
 
 </head>
@@ -46,7 +46,7 @@
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-				</ulphp
+				</ul>	
 			</div>
 		</div>
 	</nav>
