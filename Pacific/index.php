@@ -46,8 +46,18 @@
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Accounts<i class="bi bi-chevron-down"></i></a>
-						
+					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#accounts" >Accounts<i class="bi bi-chevron-down"></i></a>
+						<ul class="dropdown-menu" aria-labelledby="accounts">
+							<li class="dropdown-item">
+								<a href="#" class="dropdown-item">Login as Admin</a>
+							</li>
+							<li class="dropdown-item">
+								<a href="#" class="dropdown-item">Login as Tourist</a>
+							</li>
+							<li class="dropdown-item">
+								<a href="#" class="dropdown-item">Create Account</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</div>
