@@ -23,6 +23,7 @@
 	<!-- Font Awesome Links -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 	<?php
 		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
@@ -35,7 +36,7 @@
 		<div class="container">
 			<a class="navbar-brand" href="index.php">TravelEase<span>Travel Agency</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu">Menu</span>
+				<span class="oi oi-menu"><i class="fa-solid fa-bars"></i></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
