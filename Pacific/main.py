@@ -1,15 +1,26 @@
 import mysql.connector
+from flask import Flask, render_template
 
 url = "127.0.0.1";
 username = "root";
 password = "";
 database = "TravelEase"
 
-conn = mysql.connector.connect(
-    host = url, 
-    user = username, 
-    password = password, 
-    database = database
-);
+app = Flask(__name__)
 
-print("server is connected")
+@app.route('/') #decorator
+def index():
+    return render_template("index.php")
+
+def db():
+    conn = mysql.connector.connect(
+        host = url, 
+        user = username, 
+        password = password, 
+        database = database
+    )
+    print("Server is connected")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    db()

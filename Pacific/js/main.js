@@ -277,4 +277,50 @@
     format: "m/d/yyyy",
     autoclose: true,
   });
+
+  // Search Filter
+  const options = [
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    "Option 4",
+    "Option 5",
+    "Iloilo",
+    "Mt. Pulag"
+  ];
+  
+  const dropdownContent = document.getElementById("searchDropdown");
+  
+  const filterFunction = () => {
+    const search = document.getElementById("searchPlace");
+    const searchText = search.value.toLowerCase();
+    dropdownContent.innerHTML = "";
+  
+    if (!searchText) {
+      return;
+    }
+  
+    const filteredOptions = options.filter((option) => {
+      return option.toLowerCase().includes(searchText);
+    });
+  
+    filteredOptions.forEach((option) => {
+      const p = document.createElement("a");
+      p.textContent = option;
+      p.onclick = function () {
+        search.value = option;
+        dropdownContent.innerHTML = "";
+      };
+      dropdownContent.appendChild(a);
+    });
+  
+    dropdownContent.style.display = "block";
+  };
+  
+  // Hide the dropdown when the user clicks outside the search input
+  window.addEventListener("click", (event) => {
+    if (event.target !== search) {
+      dropdownContent.style.display = "none";
+    }
+  });
 })(jQuery);

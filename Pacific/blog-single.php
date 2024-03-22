@@ -54,7 +54,7 @@
 								<a href="#" class="dropdown-item">Login as Tourist</a>
 							</li>
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item">Create Account</a>
+								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
 							</li>
 						</ul>
 					</li>
@@ -63,6 +63,46 @@
     </div>
   </nav>
   <!-- END nav -->
+  
+  <!-- Modal for creating a tourist account-->
+	<div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="#" method="post">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
+						<button type="button" class="btn-close" data-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<label for="">First Name</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter First Name">
+						</div>
+						<label for="">Last Name</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter Last Name">
+						</div>
+						<label for="">Email</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter email">
+						</div>
+						<label for="">Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter password">
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
   <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>

@@ -25,7 +25,7 @@
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 	<?php
-	echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
 	?>
 
 </head>
@@ -72,10 +72,29 @@
 				<form action="#" method="post">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
-						<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+						<button type="button" class="btn-close" data-dismiss="modal"></button>
 					</div>
 					<div class="modal-body">
-						
+						<label for="">First Name</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter First Name">
+						</div>
+						<label for="">Last Name</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter Last Name">
+						</div>
+						<label for="">Email</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter email">
+						</div>
+						<label for="">Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter password">
+						</div>	
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -119,24 +138,17 @@
 									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
 										<form action="#" class="search-property-1">
 											<div class="row no-gutters">
+												<!-- Search Place Dropdown  -->
 												<div class="col-md d-flex">
 													<div class="form-group p-4 border-0">
 														<label for="#">Destination</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control dropdown dropdown-toggle" placeholder="Search place" data-bs-toggle="dropdown" aria-expanded="false" id="searchPlace" type="button">
+															<input type="text" class="form-control" oninput="filterFunction()" placeholder="Search place" id="searchPlace">
 														</div>
-														<ul class="dropdown-menu" aria-labelledby="searchPlace">
-															<li class="dropdown-item">
-																<a href="#" class="dropdown-item">Iloilo</a>
-															</li>
-															<li class="dropdown-item">
-																<a href="#" class="dropdown-item">Iloilo</a>
-															</li>
-															<li class="dropdown-item">
-																<a href="#" class="dropdown-item">Iloilo</a>
-															</li>
-														</ul>
+														<div class="dropdown-content" id="searchDropdown">
+															
+														</div>
 													</div>
 												</div>
 												<div class="col-md d-flex">
@@ -418,7 +430,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a href="destination.php" phpclass="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
+								<a href="destination.php" class="img" style="background-image: url(images/Mt.\ Pulag.jpg)">
 									<div class="text">
 										<h3>Mt. Pulag, Benguet</h3>
 										<span>7 Tours</span>
