@@ -46,7 +46,7 @@
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#accounts" >Accounts<i class="bi bi-chevron-down"></i></a>
+					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#accounts">Accounts<i class="bi bi-chevron-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="accounts">
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item">Login as Admin</a>
@@ -55,8 +55,8 @@
 								<a href="#" class="dropdown-item">Login as Tourist</a>
 							</li>
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item">Create Account</a>
-							</li>
+								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
+							</li>        
 						</ul>
 					</li>
 				</ul>
@@ -64,6 +64,27 @@
 		</div>
 	</nav>
 	<!-- END nav -->
+	
+	<!-- Modal for creating a tourist account-->
+	<div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="#" method="post">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
+						<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
@@ -103,8 +124,19 @@
 														<label for="#">Destination</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control" placeholder="Search place">
+															<input type="text" class="form-control dropdown dropdown-toggle" placeholder="Search place" data-bs-toggle="dropdown" aria-expanded="false" id="searchPlace" type="button">
 														</div>
+														<ul class="dropdown-menu" aria-labelledby="searchPlace">
+															<li class="dropdown-item">
+																<a href="#" class="dropdown-item">Iloilo</a>
+															</li>
+															<li class="dropdown-item">
+																<a href="#" class="dropdown-item">Iloilo</a>
+															</li>
+															<li class="dropdown-item">
+																<a href="#" class="dropdown-item">Iloilo</a>
+															</li>
+														</ul>
 													</div>
 												</div>
 												<div class="col-md d-flex">
