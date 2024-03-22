@@ -73,7 +73,7 @@
 				<form action="#" method="post">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
-						<button type="button" class="btn-close" data-dismiss="modal"></button>
+						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
 					</div>
 					<div class="modal-body">
 						<label for="">First Name</label>
@@ -145,10 +145,7 @@
 														<label for="#">Destination</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control" oninput="filterFunction()" placeholder="Search place" id="searchPlace">
-														</div>
-														<div class="dropdown-content" id="searchDropdown">
-															
+															<input type="text" class="form-control" placeholder="Search place" id="searchPlace">
 														</div>
 													</div>
 												</div>

@@ -84,7 +84,7 @@
 				<form action="#" method="post">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
-						<button type="button" class="btn-close" data-dismiss="modal"></button>
+						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
 					</div>
 					<div class="modal-body">
 						<label for="">First Name</label>
