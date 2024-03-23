@@ -50,7 +50,7 @@
 					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#accounts">Accounts<i class="bi bi-chevron-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="accounts">
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item">Login as Admin</a>
+								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#admin_login">Login as Admin</a>
 							</li>
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#loginTourist">Login as Tourist</a>
@@ -78,28 +78,33 @@
 					<div class="modal-body">
 						<label for="firstName">First Name</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
-							<input type="text" class="form-control" placeholder="Enter First Name">
+							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+							<input type="text" class="form-control" placeholder="Enter First Name" name="firstName">
 						</div>
 						<label for="lastName">Last Name</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
-							<input type="text" class="form-control" placeholder="Enter Last Name">
+							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+							<input type="text" class="form-control" placeholder="Enter Last Name" name="lastName">
 						</div>
 						<label for="lastName">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
-							<input type="text" class="form-control" placeholder="Enter email">
+							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
 						<div class="input-group">
-							<span class="input-group-text"></span>
-							<input type="text" class="form-control" placeholder="Enter password">
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+							<input type="password" class="form-control" placeholder="Enter password" name="pass">
+						</div>	
+						<label for="confirm_password">Confirm Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+							<input type="password" class="form-control" placeholder="Enter confirm password" name="confirm_pass">
 						</div>	
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+						<button type="submit" class="btn btn-success">Create Account</button>
 					</div>
 				</form>
 			</div>
@@ -118,24 +123,53 @@
 					<div class="modal-body">
 						<label for="email">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
-							<input type="text" class="form-control" placeholder="Enter email">
+							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
 						<div class="input-group">
-							<span class="input-group-text"></span>
-							<input type="text" class="form-control" placeholder="Enter password">
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+							<input type="password" class="form-control" placeholder="Enter password" name="pass">
 						</div>	
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+						<button type="submit" class="btn btn-success">Login</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-
+	<!-- Modal for login admin -->
+	<div class="modal fade" id="admin_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="#" method="post">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
+						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+					</div>
+					<div class="modal-body">
+						<label for="email">Email</label>
+						<div class="input-group">
+							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+							<input type="text" class="form-control" placeholder="Enter email" name="email">
+						</div>
+						<label for="password">Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+							<input type="password" class="form-control" placeholder="Enter password" name="pass">
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="reset" class="btn btn-secondary">Reset</button>
+						<button type="submit" class="btn btn-success">Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Main content -->
 	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
@@ -923,9 +957,9 @@
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 							there live the blind texts.</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="fa-brands fa-x-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="fa-brands fa-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="fa-brands fa-instagram"></span></a></li>
 						</ul>
 					</div>
 				</div>
