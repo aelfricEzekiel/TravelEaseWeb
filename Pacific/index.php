@@ -88,7 +88,7 @@
 						</div>
 						<label for="lastName">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
@@ -104,7 +104,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="reset" class="btn btn-secondary">Reset</button>
-						<button type="submit" class="btn btn-success">Create Account</button>
+						<button type="submit" class="btn btn-success" name="create_touristAccount">Create Account</button>
 					</div>
 				</form>
 			</div>
@@ -123,7 +123,7 @@
 					<div class="modal-body">
 						<label for="email">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
@@ -134,7 +134,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="reset" class="btn btn-secondary">Reset</button>
-						<button type="submit" class="btn btn-success">Login</button>
+						<button type="submit" class="btn btn-success" name="login_tourist">Login</button>
 					</div>
 				</form>
 			</div>
@@ -152,7 +152,7 @@
 					<div class="modal-body">
 						<label for="email">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
@@ -163,7 +163,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="reset" class="btn btn-secondary">Reset</button>
-						<button type="submit" class="btn btn-success">Login</button>
+						<button type="submit" class="btn btn-success" name="admin_login">Login</button>
 					</div>
 				</form>
 			</div>
@@ -203,7 +203,6 @@
 									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
 										<form action="#" class="search-property-1">
 											<div class="row no-gutters">
-												<!-- Search Place Dropdown  -->
 												<div class="col-md d-flex">
 													<div class="form-group p-4 border-0">
 														<label for="#">Destination</label>

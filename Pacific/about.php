@@ -91,33 +91,33 @@
 					<div class="modal-body">
 						<label for="firstName">First Name</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
 							<input type="text" class="form-control" placeholder="Enter First Name" name="firstName">
 						</div>
 						<label for="lastName">Last Name</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
 							<input type="text" class="form-control" placeholder="Enter Last Name" name="lastName">
 						</div>
 						<label for="email">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
 							<input type="password" class="form-control" placeholder="Enter password" name="pass">
 						</div>	
             <label for="confirm_password">Confirm Password</label>	
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
 							<input type="password" class="form-control" placeholder="Enter confirm password" name="confirm_pass">
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success">Save changes</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+						<button type="submit" class="btn btn-success" name="create_touristAccount">Create Account</button>
 					</div>
 				</form>
 			</div>
@@ -136,18 +136,18 @@
 					<div class="modal-body">
 						<label for="email">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
 							<input type="password" class="form-control" placeholder="Enter password" name="pass">
 						</div>	
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success">Save changes</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+						<button type="submit" class="btn btn-success" name="login_tourist">Login</button>
 					</div>
 				</form>
 			</div>
@@ -165,18 +165,18 @@
 					<div class="modal-body">
 						<label for="email">Email</label>
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
 						<label for="password">Password</label>	
 						<div class="input-group">
-							<span class="input-group-text"></span>
+							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
 							<input type="password" class="form-control" placeholder="Enter password" name="pass">
 						</div>	
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success">Save changes</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+						<button type="submit" class="btn btn-success" name="admin_login">Login</button>
 					</div>
 				</form>
 			</div>
