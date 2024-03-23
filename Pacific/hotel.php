@@ -54,7 +54,7 @@
 								<a href="#" class="dropdown-item">Login as Admin</a>
 							</li>
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item">Login as Tourist</a>
+								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#loginTourist">Login as Tourist</a>
 							</li>
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
@@ -87,6 +87,35 @@
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter Last Name">
 						</div>
+						<label for="">Email</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter email">
+						</div>
+						<label for="">Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter password">
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  <!-- Modal for login tourist -->
+	<div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="#" method="post">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
+						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+					</div>
+					<div class="modal-body">
 						<label for="">Email</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>

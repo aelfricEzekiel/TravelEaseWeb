@@ -1,9 +1,8 @@
-import mysql.connector
 from flask import Flask, render_template
-
-url = "127.0.0.1";
-username = "root";
-password = "";
+import mysql.connector
+url = "127.0.0.1"
+username = "root"
+password = ""
 database = "TravelEase"
 
 app = Flask(__name__)

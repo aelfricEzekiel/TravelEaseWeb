@@ -66,7 +66,7 @@
 								<a href="#" class="dropdown-item">Login as Admin</a>
 							</li>
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item">Login as Tourist</a>
+								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#loginTourist">Login as Tourist</a>
 							</li>
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
@@ -99,6 +99,35 @@
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter Last Name">
 						</div>
+						<label for="">Email</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter email">
+						</div>
+						<label for="">Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter password">
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  <!-- Modal for login tourist -->
+	<div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="#" method="post">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
+						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+					</div>
+					<div class="modal-body">
 						<label for="">Email</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>
@@ -223,7 +252,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/boracay.webp)">
-              <span class="price">$550/person</span>
+              <span class="price">₱560/person</span>
             </a>
             <div class="text p-4">
               <span class="days">4 Days Tour</span>
@@ -243,7 +272,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Siargao.jpg)">
-              <span class="price">$550/person</span>
+              <span class="price">₱1,120/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
@@ -263,7 +292,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg)">
-              <span class="price">$550/person</span>
+              <span class="price">₱320/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
@@ -284,7 +313,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg)">
-              <span class="price">$550/person</span>
+              <span class="price">₱520/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
@@ -304,7 +333,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Intramuros\ Manila.avif)">
-              <span class="price">$550/person</span>
+              <span class="price">₱220/person</span>
             </a>
             <div class="text p-4">
               <span class="days">4 Days Tour</span>
@@ -324,7 +353,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Taal\ Volcano.webp)">
-              <span class="price">$550/person</span>
+              <span class="price">₱320/person</span>
             </a>
             <div class="text p-4">
               <span class="days">1 Days Tour</span>
@@ -344,7 +373,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg)">
-              <span class="price">$550/person</span>
+              <span class="price">₱290/person</span>
             </a>
             <div class="text p-4">
               <span class="days">2 Days Tour</span>
@@ -364,7 +393,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Mt.\ Pulag.jpg)">
-              <span class="price">$550/person</span>
+              <span class="price">₱600/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
@@ -384,7 +413,7 @@
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
             <a href="#" class="img" style="background-image: url(images/Chocolate\ Hills.jpg)">
-              <span class="price">$550/person</span>
+              <span class="price">₱520/person</span>
             </a>
             <div class="text p-4">
               <span class="days">2 Days Tour</span>

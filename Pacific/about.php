@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <?php
     echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
   ?>
@@ -65,7 +66,7 @@
 								<a href="#" class="dropdown-item">Login as Admin</a>
 							</li>
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item">Login as Tourist</a>
+								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#loginTourist">Login as Tourist</a>
 							</li>
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
@@ -77,6 +78,7 @@
     </div>
   </nav>
   <!-- END nav -->
+
   <!-- Modal for creating a tourist account-->
 	<div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -97,6 +99,36 @@
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter Last Name">
 						</div>
+						<label for="">Email</label>
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter email">
+						</div>
+						<label for="">Password</label>	
+						<div class="input-group">
+							<span class="input-group-text"></span>
+							<input type="text" class="form-control" placeholder="Enter password">
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+  <!-- Modal for login tourist -->
+	<div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="#" method="post">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
+						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+					</div>
+					<div class="modal-body">
 						<label for="">Email</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>
