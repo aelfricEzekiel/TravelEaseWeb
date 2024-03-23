@@ -76,22 +76,22 @@
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
 					</div>
 					<div class="modal-body">
-						<label for="">First Name</label>
+						<label for="firstName">First Name</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter First Name">
 						</div>
-						<label for="">Last Name</label>
+						<label for="lastName">Last Name</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter Last Name">
 						</div>
-						<label for="">Email</label>
+						<label for="lastName">Email</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter email">
 						</div>
-						<label for="">Password</label>	
+						<label for="password">Password</label>	
 						<div class="input-group">
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter password">
@@ -116,12 +116,12 @@
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
 					</div>
 					<div class="modal-body">
-						<label for="">Email</label>
+						<label for="email">Email</label>
 						<div class="input-group">
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter email">
 						</div>
-						<label for="">Password</label>	
+						<label for="password">Password</label>	
 						<div class="input-group">
 							<span class="input-group-text"></span>
 							<input type="text" class="form-control" placeholder="Enter password">
