@@ -127,7 +127,7 @@
 	<div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="#" method="post">
+				<form action="#" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
@@ -156,7 +156,7 @@
   <div class="modal fade" id="adminLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="#" method="post">
+				<form action="#" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>

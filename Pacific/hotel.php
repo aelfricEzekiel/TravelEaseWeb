@@ -48,19 +48,19 @@
           <li class="nav-item active"><a href="hotel.php" class="nav-link">Hotel</a></li>
           <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-          <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#accounts" >Accounts<i class="bi bi-chevron-down"></i></a>
-						<ul class="dropdown-menu" aria-labelledby="accounts">
-							<li class="dropdown-item">
-								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#adminLogin">Login as Admin</a>
-							</li>
-							<li class="dropdown-item">
-								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#loginTourist">Login as Tourist</a>
-							</li>
-							<li class="dropdown-item">
-								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
-							</li>
-						</ul>
-					</li>
+          <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#accounts">Accounts<i class="bi bi-chevron-down"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="accounts">
+              <li class="dropdown-item">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#adminLogin">Login as Admin</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#loginTourist">Login as Tourist</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -68,107 +68,107 @@
   <!-- END nav -->
 
   <!-- Modal for creating a tourist account-->
-	<div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="#" method="post">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
-						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
-					</div>
-					<div class="modal-body">
-						<label for="firstName">First Name</label>
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-							<input type="text" class="form-control" placeholder="Enter First Name" name="firstName">
-						</div>
-						<label for="lastName">Last Name</label>
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-							<input type="text" class="form-control" placeholder="Enter Last Name" name="lastName">
-						</div>
-						<label for="email">Email</label>
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
-							<input type="text" class="form-control" placeholder="Enter email" name="email">
-						</div>
-						<label for="password">Password</label>	
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-							<input type="text" class="form-control" placeholder="Enter password" name="pass">
-						</div>	
-            <label for="confirm_password">Confirm Password</label>	
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-							<input type="text" class="form-control" placeholder="Enter confirm password" name="confirm_pass">
-						</div>	
-					</div>
-					<div class="modal-footer">
-						<button type="reset" class="btn btn-secondary">Reset</button>
-						<button type="submit" class="btn btn-success" name="create_touristAccount">Create Account</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+  <div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#" method="post">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
+            <button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+          </div>
+          <div class="modal-body">
+            <label for="firstName">First Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="Enter First Name" name="firstName">
+            </div>
+            <label for="lastName">Last Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName">
+            </div>
+            <label for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <label for="password">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+              <input type="text" class="form-control" placeholder="Enter password" name="pass">
+            </div>
+            <label for="confirm_password">Confirm Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+              <input type="text" class="form-control" placeholder="Enter confirm password" name="confirm_pass">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-success" name="create_touristAccount">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <!-- Modal for login tourist -->
-	<div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="#" method="post">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
-						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
-					</div>
-					<div class="modal-body">
-						<label for="email">Email</label>
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
-							<input type="text" class="form-control" placeholder="Enter email" name="email">
-						</div>
-						<label for="password">Password</label>	
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-							<input type="password" class="form-control" placeholder="Enter password" name="pass">
-						</div>	
-					</div>
-					<div class="modal-footer">
-						<button type="reset" class="btn btn-secondary">Reset</button>
-						<button type="submit" class="btn btn-success" name="login_tourist">Login</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+  <div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
+            <button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+          </div>
+          <div class="modal-body">
+            <label for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <label for="password">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+              <input type="password" class="form-control" placeholder="Enter password" name="pass">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-success" name="login_tourist">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <!-- Modal for login admin -->
   <div class="modal fade" id="adminLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="#" method="post">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
-						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
-					</div>
-					<div class="modal-body">
-						<label for="email">Email</label>
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
-							<input type="text" class="form-control" placeholder="Enter email" name="email">
-						</div>
-						<label for="password">Password</label>	
-						<div class="input-group">
-							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-							<input type="password" class="form-control" placeholder="Enter password" name="pass">
-						</div>	
-					</div>
-					<div class="modal-footer">
-						<button type="reset" class="btn btn-secondary">Reset</button>
-						<button type="submit" class="btn btn-success">Login</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
+            <button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+          </div>
+          <div class="modal-body">
+            <label for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <label for="password">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+              <input type="password" class="form-control" placeholder="Enter password" name="pass">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-success" name="admin_login">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <!-- Main Content -->
   <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>

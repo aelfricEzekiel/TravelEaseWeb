@@ -1,3 +1,51 @@
+<?php 
+	include "conn.php";
+	
+	if(isset($_POST['create_touristAccount'])){
+		$first_name = $_POST['firstName'];
+		$last_name = $_POST['lastName'];
+		$email = $_POST['email'];
+		$password = $_POST['pass'];
+		$confirm_pass = $_POST['confirm_pass'];
+
+		$check_val_fname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE firstName = '$first_name'");
+		$val_row_fn = mysqli_num_rows($check_val_fname);
+
+		$check_val_lname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE lastName = '$last_name'");
+		$val_row_ln = mysqli_num_rows($check_val_lname);
+
+		if($val_row_fn <= 0){
+			$insert_fn = mysqli_query($conn, "INSERT INTO tourist_account VALUES('0', '$first_name', '$last_name', '$email', '$password', '$confirm_pass')");
+
+			if($insert_fn == true){
+				?>
+					<script>
+						alert("Tourist Data Inserted");
+						window.location.href="index.php";
+					</script>
+				<?php
+			} else {
+				?>
+					<script>
+						alert("No data inserted");
+						window.location.href="index.php";
+					</script>
+				<?php
+			}
+		}else {
+			
+			?>
+				<script>
+					alert("First name is already taken!");
+					window.location.href="index.php";
+
+				</script>
+			<?php
+		}
+
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,9 +72,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<?php
-		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>", "<script src='js/main.js' type='text/js'></script>";
 	?>
 
 </head>
@@ -57,7 +105,7 @@
 							</li>
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item" data-toggle="modal" data-target="#createTouristAccount">Create Account</a>
-							</li>       
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -65,12 +113,12 @@
 		</div>
 	</nav>
 	<!-- END nav -->
-	
+
 	<!-- Modal for creating a tourist account-->
 	<div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="#" method="post">
+				<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
@@ -79,28 +127,28 @@
 						<label for="firstName">First Name</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-							<input type="text" class="form-control" placeholder="Enter First Name" name="firstName">
+							<input type="text" class="form-control" placeholder="Enter First Name" name="firstName" required>
 						</div>
 						<label for="lastName">Last Name</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-							<input type="text" class="form-control" placeholder="Enter Last Name" name="lastName">
+							<input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required>
 						</div>
 						<label for="lastName">Email</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
-							<input type="text" class="form-control" placeholder="Enter email" name="email">
+							<input type="text" class="form-control" placeholder="Enter email" name="email" required>
 						</div>
-						<label for="password">Password</label>	
+						<label for="password">Password</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-							<input type="password" class="form-control" placeholder="Enter password" name="pass">
-						</div>	
-						<label for="confirm_password">Confirm Password</label>	
+							<input type="password" class="form-control" placeholder="Enter password" name="pass" id="password" required>
+						</div>
+						<label for="confirm_password">Confirm Password</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-							<input type="password" class="form-control" placeholder="Enter confirm password" name="confirm_pass">
-						</div>	
+							<input type="password" class="form-control" placeholder="Enter confirm password" name="confirm_pass" id="password" required>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="reset" class="btn btn-secondary">Reset</button>
@@ -115,7 +163,7 @@
 	<div class="modal fade" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="#" method="post">
+				<form action="#" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Login Tourist Account</h5>
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
@@ -126,11 +174,11 @@
 							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
-						<label for="password">Password</label>	
+						<label for="password">Password</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
 							<input type="password" class="form-control" placeholder="Enter password" name="pass">
-						</div>	
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="reset" class="btn btn-secondary">Reset</button>
@@ -144,7 +192,7 @@
 	<div class="modal fade" id="admin_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="#" method="post">
+				<form action="#" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
@@ -155,11 +203,11 @@
 							<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
 							<input type="text" class="form-control" placeholder="Enter email" name="email">
 						</div>
-						<label for="password">Password</label>	
+						<label for="password">Password</label>
 						<div class="input-group">
 							<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
 							<input type="password" class="form-control" placeholder="Enter password" name="pass">
-						</div>	
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="reset" class="btn btn-secondary">Reset</button>
