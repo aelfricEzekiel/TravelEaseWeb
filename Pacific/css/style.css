@@ -4722,7 +4722,6 @@ input[type="button"].btn-block {
 .tab-content > .active {
   display: block;
 }
-
 .navbar {
   position: relative;
   display: -webkit-box;
