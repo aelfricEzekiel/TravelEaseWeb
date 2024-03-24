@@ -750,10 +750,8 @@ if (isset($_POST['create_touristAccount'])) {
 								<div class="col-md-12 heading-section ftco-animate">
 									<span class="subheading">About Us</span>
 									<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
-									<p><a href="#" class="btn btn-primary">Book Your Destination</a></p>
+									<p>TravelEase highlights the relevant information clearly and concisely. The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
+									<p><a href="destination.php" class="btn btn-primary">Book Your Destination</a></p>
 								</div>
 							</div>
 						</div>
@@ -975,7 +973,7 @@ if (isset($_POST['create_touristAccount'])) {
 					<div class="img" style="background-image: url(images/bg_2.jpg);">
 						<div class="overlay"></div>
 						<h2>We Are Travel Ease A Travel Agency</h2>
-						<p>We can manage your dream building A small river named Duden flows by their place</p>
+						<p>We can help you decide for your vacation</p>
 						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
 					</div>
 				</div>

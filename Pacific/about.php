@@ -221,10 +221,7 @@
                 </div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Activities</h3>
-                  <p>
-                    A small river named Duden flows by their place and
-                    supplies it with the necessary
-                  </p>
+                  <p>Banana Boat, Swimming Pool, Waterfalls and Hiking</p>
                 </div>
               </div>
             </div>
@@ -235,10 +232,7 @@
                 </div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Travel Arrangements</h3>
-                  <p>
-                    A small river named Duden flows by their place and
-                    supplies it with the necessary
-                  </p>
+                  <p>TravelEase offer ideas to enjoy your vacation</p>
                 </div>
               </div>
             </div>
@@ -249,10 +243,7 @@
                 </div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Private Guide</h3>
-                  <p>
-                    A small river named Duden flows by their place and
-                    supplies it with the necessary
-                  </p>
+                  <p>Professional Tour Guide will accomodate you to the good place and great stories for the whole vacation</p>
                 </div>
               </div>
             </div>
@@ -262,11 +253,8 @@
                   <span class="flaticon-map"></span>
                 </div>
                 <div class="media-body">
-                  <h3 class="heading mb-3">Location Manager</h3>
-                  <p>
-                    A small river named Duden flows by their place and
-                    supplies it with the necessary
-                  </p>
+                  <h3 class="heading mb-3">Hotels</h3>
+                  <p>Looking for near hotels for vacation</p>
                 </div>
               </div>
             </div>
@@ -304,12 +292,7 @@
                   <h2 class="mb-4">
                     Make Your Tour Memorable and Safe With Us
                   </h2>
-                  <p>
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts. Separated they live in Bookmarksgrove right at the
-                    coast of the Semantics, a large language ocean.
-                  </p>
+                  <p>TravelEase highlights the relevant information clearly and concisely. The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
                   <p>
                     <a href="destination.php" class="btn btn-primary">Book Your Destination</a>
                   </p>
@@ -472,10 +455,7 @@
           <div class="img" style="background-image: url(images/bg_2.jpg)">
             <div class="overlay"></div>
             <h2>We Are Travel Ease A Travel Agency</h2>
-            <p>
-              We can manage your dream building A small river named Duden
-              flows by their place
-            </p>
+            <p>We can help you decide for your vacation</p>
             <p class="mb-0">
               <a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a>
             </p>
@@ -491,19 +471,16 @@
         <div class="col-md pt-5">
           <div class="ftco-footer-widget pt-md-5 mb-4">
             <h2 class="ftco-heading-2">About</h2>
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
-            </p>
+            <p>TravelEase highlights the relevant information clearly and concisely. The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
               <li class="ftco-animate">
-                <a href="#"><span class="fa fa-twitter"></span></a>
+                <a href="#"><span class="fa-brands fa-x-twitter"></span></a>
               </li>
               <li class="ftco-animate">
-                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa-brands fa-facebook"></span></a>
               </li>
               <li class="ftco-animate">
-                <a href="#"><span class="fa fa-instagram"></span></a>
+                <a href="#"><span class="fa-brands fa-instagram"></span></a>
               </li>
             </ul>
           </div>
