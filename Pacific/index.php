@@ -1,49 +1,43 @@
-<?php 
-	include "conn.php";
-	
-	if(isset($_POST['create_touristAccount'])){
-		$first_name = $_POST['firstName'];
-		$last_name = $_POST['lastName'];
-		$email = $_POST['email'];
-		$password = $_POST['pass'];
-		$confirm_pass = $_POST['confirm_pass'];
+<?php
+include "conn.php";
 
-		$check_val_fname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE firstName = '$first_name'");
-		$val_row_fn = mysqli_num_rows($check_val_fname);
+if (isset($_POST['create_touristAccount'])) {
+	$first_name = $_POST['firstName'];
+	$last_name = $_POST['lastName'];
+	$email = $_POST['email'];
+	$password = $_POST['pass'];
+	$confirm_pass = $_POST['confirm_pass'];
 
-		$check_val_lname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE lastName = '$last_name'");
-		$val_row_ln = mysqli_num_rows($check_val_lname);
+	$check_val_fname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE firstName = '$first_name'");
+	$val_row_fn = mysqli_num_rows($check_val_fname);
 
-		if($val_row_fn <= 0){
-			$insert_fn = mysqli_query($conn, "INSERT INTO tourist_account VALUES('0', '$first_name', '$last_name', '$email', '$password', '$confirm_pass')");
+	if ($val_row_fn <= 0) {
+		$insert_fn = mysqli_query($conn, "INSERT INTO tourist_account VALUES('0', '$first_name', '$last_name', '$email', '$password', '$confirm_pass')");
 
-			if($insert_fn == true){
-				?>
-					<script>
-						alert("Tourist Data Inserted");
-						window.location.href="index.php";
-					</script>
-				<?php
-			} else {
-				?>
-					<script>
-						alert("No data inserted");
-						window.location.href="index.php";
-					</script>
-				<?php
-			}
-		}else {
-			
-			?>
-				<script>
-					alert("First name is already taken!");
-					window.location.href="index.php";
-
-				</script>
-			<?php
+		if ($insert_fn == true) {
+?>
+			<script>
+				alert("Tourist Data Inserted");
+				window.location.href = "index.php";
+			</script>
+		<?php
+		} else {
+		?>
+			<script>
+				alert("No data inserted");
+				window.location.href = "index.php";
+			</script>
+		<?php
 		}
-
+	} else {
+		?>
+		<script>
+			alert("First name is already taken!");
+			window.location.href = "index.php";
+		</script>
+<?php
 	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +68,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<?php
-		echo "<link rel='stylesheet' href='css/style.css' type='text/css'>", "<script src='js/main.js' type='text/js'></script>";
+	echo "<link rel='stylesheet' href='css/style.css' type='text/css'>", "<script src='js/main.js' type='text/js'></script>";
 	?>
 
 </head>
@@ -118,7 +112,7 @@
 	<div class="modal fade" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
+				<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
 						<button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
@@ -395,13 +389,8 @@
 					<div class="w-100">
 						<span class="subheading">Welcome to TravelEase</span>
 						<h2 class="mb-4">It's time to start your adventure</h2>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-							It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-							Semantics, a large language ocean.
-							A small river named Duden flows by their place and supplies it with the necessary
-							regelialia.</p>
+						<p>TravelEase highlights the relevant information clearly and concisely.</p>
+						<p>The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
 						<p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p>
 					</div>
 				</div>
@@ -412,8 +401,7 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Activities</h3>
-									<p>A small river named Duden flows by their place and supplies it with the necessary
-									</p>
+									<p>Banana Boat, Swimming Pool, Waterfalls and Hiking</p>
 								</div>
 							</div>
 						</div>
@@ -422,8 +410,7 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Travel Arrangements</h3>
-									<p>A small river named Duden flows by their place and supplies it with the necessary
-									</p>
+									<p>TravelEase offer ideas to enjoy your vacation</p>
 								</div>
 							</div>
 						</div>
@@ -432,8 +419,7 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
 								<div class="media-body">
 									<h3 class="heading mb-3">Private Guide</h3>
-									<p>A small river named Duden flows by their place and supplies it with the necessary
-									</p>
+									<p>Professional Tour Guide will accomodate you to the good place and great stories for the whole vacation</p>
 								</div>
 							</div>
 						</div>
@@ -441,9 +427,8 @@
 							<div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
 								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
 								<div class="media-body">
-									<h3 class="heading mb-3">Location Manager</h3>
-									<p>A small river named Duden flows by their place and supplies it with the necessary
-									</p>
+									<h3 class="heading mb-3">Hotels</h3>
+									<p>Looking for near hotels for vacation</p>
 								</div>
 							</div>
 						</div>
@@ -918,60 +903,63 @@
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
+						<a href="blog-single.php" class="block-20" style="background-image: url('images/blog\ 1.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
 								<div class="one">
-									<span class="day">11</span>
+									<span class="day">4</span>
 								</div>
 								<div class="two">
-									<span class="yr">2020</span>
-									<span class="mos">September</span>
+									<span class="yr">2024</span>
+									<span class="mos">January</span>
 								</div>
 							</div>
-							<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-							<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+							<h3 class="heading"><a href="blog.php">Popular Destination in the Philippines</a></h3>
+							<h3 class="heading"><a href="blog.php">Siargao Island</a></h3>
+							<p>Siargao is a tear-drop shaped island in the Philippine Sea situated 196 kilometers southeast of Tacloban.</p>
 							<p><a href="#" class="btn btn-primary">Read more</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
+						<a href="blog-single.php" class="block-20" style="background-image: url('images/blog\ 2.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
 								<div class="one">
-									<span class="day">11</span>
+									<span class="day">16</span>
 								</div>
 								<div class="two">
-									<span class="yr">2020</span>
-									<span class="mos">September</span>
+									<span class="yr">2023</span>
+									<span class="mos">December</span>
 								</div>
 							</div>
-							<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-							<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+							<h3 class="heading"><a href="blog.php">Popular Destination in the Philippines</a></h3>
+							<h3 class="heading"><a href="blog.php">Boracay</a></h3>
+							<p>Boracay is popular for its beaches and blessed with a long stretch of powdery white sand, crystal clear and azure waters, and a stunning sunset.</p>
 							<p><a href="#" class="btn btn-primary">Read more</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
+						<a href="blog-single.php" class="block-20" style="background-image: url('images/blog\ 4.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
 								<div class="one">
-									<span class="day">11</span>
+									<span class="day">14</span>
 								</div>
 								<div class="two">
-									<span class="yr">2020</span>
-									<span class="mos">September</span>
+									<span class="yr">2023</span>
+									<span class="mos">April</span>
 								</div>
 							</div>
-							<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-							<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+							<h3 class="heading"><a href="blog.php">Popular Destination in the Philippines</a></h3>
+							<h3 class="heading"><a href="blog.php">Kawasan Falls</a></h3>
+							<p>The Kawasan Falls is a three-stage cascade of clear turquoise water from mountain springs located in the jungles of the Cebu island.</p>
 							<p><a href="#" class="btn btn-primary">Read more</a></p>
 						</div>
 					</div>
@@ -1001,8 +989,7 @@
 				<div class="col-md pt-5">
 					<div class="ftco-footer-widget pt-md-5 mb-4">
 						<h2 class="ftco-heading-2">About</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
+						<p>TravelEase highlights the relevant information clearly and concisely. The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 							<li class="ftco-animate"><a href="#"><span class="fa-brands fa-x-twitter"></span></a></li>
 							<li class="ftco-animate"><a href="#"><span class="fa-brands fa-facebook"></span></a></li>
@@ -1069,10 +1056,12 @@
 
 
 	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+	<div id="ftco-loader" class="show fullscreen">
+		<svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
-		</svg></div>
+		</svg>
+	</div>
 
 
 	<script src="js/jquery.min.js"></script>

@@ -205,18 +205,8 @@
           <div class="w-100">
             <span class="subheading">Welcome to TravelEase</span>
             <h2 class="mb-4">It's time to start your adventure</h2>
-            <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
-            </p>
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics,
-              a large language ocean. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia.
-            </p>
+            <p>TravelEase highlights the relevant information clearly and concisely. </p>
+            <p>The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
             <p>
               <a href="#" class="btn btn-primary py-3 px-4">Search Destination</a>
             </p>
