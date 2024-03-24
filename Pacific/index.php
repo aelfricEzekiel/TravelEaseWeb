@@ -1,43 +1,43 @@
 <?php
-include "conn.php";
+	include "conn.php";
 
-if (isset($_POST['create_touristAccount'])) {
-	$first_name = $_POST['firstName'];
-	$last_name = $_POST['lastName'];
-	$email = $_POST['email'];
-	$password = $_POST['pass'];
-	$confirm_pass = $_POST['confirm_pass'];
+	if (isset($_POST['create_touristAccount'])) {
+		$first_name = $_POST['firstName'];
+		$last_name = $_POST['lastName'];
+		$email = $_POST['email'];
+		$password = $_POST['pass'];
+		$confirm_pass = $_POST['confirm_pass'];
 
-	$check_val_fname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE firstName = '$first_name'");
-	$val_row_fn = mysqli_num_rows($check_val_fname);
+		$check_val_fname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE firstName = '$first_name'");
+		$val_row_fn = mysqli_num_rows($check_val_fname);
 
-	if ($val_row_fn <= 0) {
-		$insert_fn = mysqli_query($conn, "INSERT INTO tourist_account VALUES('0', '$first_name', '$last_name', '$email', '$password', '$confirm_pass')");
+		if ($val_row_fn <= 0) {
+			$insert_fn = mysqli_query($conn, "INSERT INTO tourist_account VALUES('0', '$first_name', '$last_name', '$email', '$password', '$confirm_pass')");
 
-		if ($insert_fn == true) {
-?>
-			<script>
-				alert("Tourist Data Inserted");
-				window.location.href = "index.php";
-			</script>
-		<?php
+			if ($insert_fn == true) {
+				?>
+					<script>
+						alert("Tourist Data Inserted");
+						window.location.href = "index.php";
+					</script>
+				<?php
+			} else {
+				?>
+					<script>
+						alert("No data inserted");
+						window.location.href = "index.php";
+					</script>
+				<?php
+			}
 		} else {
-		?>
-			<script>
-				alert("No data inserted");
-				window.location.href = "index.php";
-			</script>
-		<?php
+			?>
+				<script>
+					alert("First name is already taken!");
+					window.location.href = "index.php";
+				</script>
+			<?php
 		}
-	} else {
-		?>
-		<script>
-			alert("First name is already taken!");
-			window.location.href = "index.php";
-		</script>
-<?php
 	}
-}
 ?>
 
 <!DOCTYPE html>
