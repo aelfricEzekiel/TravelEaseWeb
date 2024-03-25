@@ -1,41 +1,9 @@
-<?php
-	include "conn.php";
-	session_start();
-
-	// This line of code is for tourist login
-	if(isset($_POST['login_tourist'])){
-		$email = $_POST['email'];
-		$password = $_POST['pass'];
-
-		$check = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email' AND password = '$password'");
-		$val_row_emailPass = mysqli_num_rows($check);
-
-		if($val_row_emailPass >= 1){
-			$_SESSION['email'] = $email;
-
-			?>
-				<script>
-					alert("Login Successful!");
-					window.location.href="index.php";
-				</script>
-			<?php
-		} else {
-			?>
-				<script>
-					alert("Incorrect email and password!");
-					window.location.href="login.php";
-				</script>
-			<?php
-		}
-	}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -59,10 +27,10 @@
 	echo "<link rel='stylesheet' href='css/style.css' type='text/css'>", "<script src='js/main.js' type='text/js'></script>";
 	?>
 
-    <title>Login</title>
+    <title>Admin</title>
 </head>
-<body>  
-	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
+<body>
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
@@ -71,38 +39,41 @@
 					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
 					<p class="caps">Travel to the any corner of the world, without going around in circles</p>
 				</div>
+				<a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<span class="fa fa-play"></span>
+				</a>
 			</div>
-		</div>
-		<div class="modal" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Login</h5>
-						</div>
-						<div class="modal-body">
-							<label for="email">Email</label>
-							<div class="input-group">
-								<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
-								<input type="email" class="form-control" placeholder="Enter email" name="email" required>
-							</div>
-							<label for="password">Password</label>
-							<div class="input-group">
-								<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-								<input type="password" class="form-control" placeholder="Enter password" name="pass" required>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<a href="admin.php" class="btn btn-secondary">Login as Admin</a> 
-							<a href="touristAcc.php" class="btn btn-secondary">Register</a>
-							<button type="reset" class="btn btn-secondary">Reset</button>
-							<button type="submit" class="btn btn-secondary" name="login_tourist">Login</button>
-						</div>
-					</form>
-				</div>
-			</div>
+            <div class="modal" id="adminLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
+                                <button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter email" name="email">
+                                </div>
+                                <label for="password">Password</label>	
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                    <input type="password" class="form-control" placeholder="Enter password" name="pass">
+                                </div>	
+                            </div>
+                            <div class="modal-footer">
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                                <button type="submit" class="btn btn-success" name="admin_login">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
+
     <!-- loader -->
 	<div id="ftco-loader" class="show fullscreen">
 		<svg class="circular" width="48px" height="48px">

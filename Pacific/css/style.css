@@ -5264,10 +5264,6 @@ input[type="button"].btn-block {
 .card-link + .card-link {
   margin-left: 1.25rem;
 }
-/* Login form  */
-.login-box {
-  position: relative;
-}
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
@@ -6421,17 +6417,27 @@ a.close.disabled {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
+/* Login form box */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 8rem;
+  left: 25rem;
   z-index: 1050;
   width: 100%;
   height: 100%;
   overflow: hidden;
   outline: 0;
-  margin: 9rem 25rem;
+}
+/* Registration form box */
+.modal1{
+  position: fixed;
+  top: 0.1rem;
+  left: 28rem;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
 }
 
 .modal-dialog {
