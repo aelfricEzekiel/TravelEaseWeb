@@ -1,3 +1,24 @@
+<?php
+	include "conn_2.php";
+	session_start();
+
+    if(empty($_SESSION)){
+        ?>
+            <script>
+                alert("Please login first");
+                window.location.href="login.php";
+            </script>
+        <?php
+    } else {
+        $email = $_SESSION['email'];
+
+        $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
+        while($row = mysqli_fetch_object($get_details)){
+            $firstName = $row -> firstName;
+            $lastName = $row -> lastName;
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,7 +49,7 @@
                         <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Book</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>2
+                        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
