@@ -94,7 +94,7 @@
       <div class="row">
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/thePiccoloHotel.jpg);">
+            <a href="#" data-toggle="modal" data-target="#bookHotel" class="img" style="background-image: url(images/thePiccoloHotel.jpg);">
               <span class="price">₱2,400/person</span>
             </a>
             <div class="text p-4">
@@ -105,7 +105,7 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">4 Days Tour</span>
-              <h3><a href="#">The Piccolo Hotel</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">The Piccolo Hotel</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Boracay, Philippines</p>
               <ul>
                 <li><span class="flaticon-shower"></span>2</li>
@@ -308,7 +308,82 @@
     </div>
   </section>
 
+    <!-- this Modal Pop Up form for Booking a  hotel -->
+  <div class="modal fade" id="bookHotel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <form action="process.php" method="post" enctype="multipart/form-data" id="booking-form">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Book a Hotel</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="firstName">First Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="Enter First Name" name="firstName" required>
+            </div>
+            <label for="lastName">Last Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required>
+            </div>
+            <label for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+              <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+            </div>
 
+            <label for="selectDestination">Select a Destination</label>
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04" name="place">
+                <option selected>Choose</option>
+                <option value="Boracay Island">Boracay Island</option>
+                <option value="Siargao Island">Siargao Island</option>
+                <option value="Coron Island">Coron Island</option>
+                <option value="Calle Crisologo">Calle Crisologo</option>
+                <option value="Fort Santiago">Fort Santiago</option>
+                <option value="Taal Volcano">Taal Volcano</option>
+                <option value="Kawasan Falls">Kawasan Falls</option>
+                <option value="Mt. Pulag">Mt. Pulag</option>
+                <option value="Chocolate Hills">Chocolate Hills</option>
+              </select>
+            </div>
+            <label for="startDate">Start Date</label><br>
+            <div class="input-group">
+              <input type="date" id="startDate" name="startDate">
+            </div>
+            <label for="endDate">End Date</label><br>
+            <div class="input-group">
+              <input type="date" id="endDate" name="endDate">
+            </div>
+            <label for="selectPrice">Select a Price</label>
+            <br>
+            <div class="input-group">
+              <select class="custom-select" id="pricePerDay" name="price">
+                <option selected>Choose</option>
+                <option value="560" data-price="560">₱560</option>
+                <option value="1120" data-price="1,120">₱1120</option>
+                <option value="320" data-price="320">₱320</option>
+                <option value="520" data-price="520">₱520</option>
+                <option value="220" data-price="220">₱220</option>
+                <option value="320" data-price="320">₱320</option>
+                <option value="290" data-price="290">₱290</option>
+                <option value="600" data-price="600">₱600</option>
+                <option value="520" data-price="520">₱520</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-secondary" name="bookHotel" onclick="calculateTourCost()">Book a Hotel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
@@ -316,7 +391,7 @@
         <div class="col-md-12 text-center">
           <div class="img" style="background-image: url(images/bg_2.jpg);">
             <div class="overlay"></div>
-            <h2>We Are Travel Ease A Travel Agency</h2>
+            <h2>We Are Travel Ease</h2>
             <p>We can help you decide for your vacation</p>
             <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
           </div>
