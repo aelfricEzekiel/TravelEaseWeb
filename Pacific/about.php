@@ -1,3 +1,25 @@
+<?php
+	include "conn.php";
+	session_start();
+
+    if(empty($_SESSION)){
+        ?>
+            <script>
+                alert("Please login first");
+                window.location.href="login.php";
+            </script>
+        <?php
+    } else {
+        $email= $_SESSION['email'];
+
+        $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
+        while($row = mysqli_fetch_object($get_details)){
+            $firstName = $row -> firstName;
+            $lastName = $row -> lastName;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +57,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.php">TravelEase<span>Travel Agency</span></a>
+      <a class="navbar-brand" href="index.php">Travel Ease</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"><i class="fa-solid fa-bars"></i></span>
       </button>

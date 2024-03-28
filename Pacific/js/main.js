@@ -278,5 +278,27 @@
     autoclose: true,
   });
 
+  function calculateDaysDifference(date1, date2){
+    const oneDay = 24 * 60 * 60 * 1000;
+    const timeDiffrence = Math.abs(date2.getTime() - date1.getTime());
+    return Math.round(timeDiffrence / oneDay);
+  }
+  
+  function calculateTourCost(){
+    const startDate = new Date(document.getElementById("startDate").value);
+    const endDate = new Date(document.getElementById("endDate").value);
+    const pricePerDay = parseFloat(document.getElementById("pricePerDay").value);
+  
+    if(startDate > endDate) {
+      docuke("End date should be later than start date");
+      return;
+    }
+  
+    const daysDifference = calculateDaysDifference(startDate, endDate);
+    const totalPrice = daysDifference * pricePerDay;
 
+
+    document.querySelector("#result").innerHTML = 'Number of days: ${daysDifference}<br>Total price: $${totalPrice.toFixed(2)}';
+    
+  }
 })(jQuery);

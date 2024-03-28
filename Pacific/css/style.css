@@ -6417,19 +6417,20 @@ a.close.disabled {
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* Login form box */
+
 .modal {
   position: fixed;
-  top: 8rem;
-  left: 25rem;
+  top: 0;
+  left: 0;
   z-index: 1050;
+  display: none;
   width: 100%;
   height: 100%;
   overflow: hidden;
   outline: 0;
 }
 /* Registration form box */
-.modal1{
+.create-account-box {
   position: fixed;
   top: 0.1rem;
   left: 28rem;
@@ -6439,7 +6440,17 @@ a.close.disabled {
   overflow: hidden;
   outline: 0;
 }
-
+/* Login form box */
+.login-box {
+  position: fixed;
+  top: 8rem;
+  left: 25rem;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
 .modal-dialog {
   position: relative;
   width: auto;

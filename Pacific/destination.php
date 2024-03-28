@@ -1,3 +1,26 @@
+<?php
+	include "conn.php";
+	session_start();
+
+    if(empty($_SESSION)){
+        ?>
+            <script>
+                alert("Please login first");
+                window.location.href="login.php";
+            </script>
+        <?php
+    } else {
+        $email= $_SESSION['email'];
+
+        $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
+        while($row = mysqli_fetch_object($get_details)){
+            $firstName = $row -> firstName;
+            $lastName = $row -> lastName;
+        }
+    }
+    
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +57,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.php">TravelEase<span>Travel Agency</span></a>
+      <a class="navbar-brand" href="index.php">Travel Ease</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"><i class="fa-solid fa-bars"></i></span>
@@ -83,107 +106,22 @@
     </div>
   </section>
 
-  <section class="ftco-section ftco-no-pb">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="search-wrap-1 ftco-animate">
-            <form action="#" class="search-property-1">
-              <div class="row no-gutters">
-                <div class="col-lg d-flex">
-                  <div class="form-group p-4 border-0">
-                    <label for="#">Destination</label>
-                    <div class="form-field">
-                      <div class="icon">
-                        <span class="fa fa-search"></span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="Search place" />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg d-flex">
-                  <div class="form-group p-4">
-                    <label for="#">Check-in date</label>
-                    <div class="form-field">
-                      <div class="icon">
-                        <span class="fa fa-calendar"></span>
-                      </div>
-                      <input type="text" class="form-control checkin_date" placeholder="Check In Date" />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg d-flex">
-                  <div class="form-group p-4">
-                    <label for="#">Check-out date</label>
-                    <div class="form-field">
-                      <div class="icon">
-                        <span class="fa fa-calendar"></span>
-                      </div>
-                      <input type="text" class="form-control checkout_date" placeholder="Check Out Date" />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg d-flex">
-                  <div class="form-group p-4">
-                    <label for="#">Price Limit</label>
-                    <div class="form-field">
-                      <div class="select-wrap">
-                        <div class="icon">
-                          <span class="fa fa-chevron-down"></span>
-                        </div>
-                        <select name="" id="" class="form-control">
-                          <option value="">$5,000</option>
-                          <option value="">$10,000</option>
-                          <option value="">$50,000</option>
-                          <option value="">$100,000</option>
-                          <option value="">$200,000</option>
-                          <option value="">$300,000</option>
-                          <option value="">$400,000</option>
-                          <option value="">$500,000</option>
-                          <option value="">$600,000</option>
-                          <option value="">$700,000</option>
-                          <option value="">$800,000</option>
-                          <option value="">$900,000</option>
-                          <option value="">$1,000,000</option>
-                          <option value="">$2,000,000</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg d-flex">
-                  <div class="form-group d-flex w-100 border-0">
-                    <div class="form-field w-100 align-items-center d-flex">
-                      <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="ftco-section">
     <div class="container">
       <div class="row">
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/boracay.webp)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/boracay.webp)">
               <span class="price">₱560/person</span>
             </a>
             <div class="text p-4">
               <span class="days">4 Days Tour</span>
-              <h3><a href="#">Boracay Island</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Boracay Island</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Aklan, Western Visayas,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-mountains"></span>Near Western Coast</li>
               </ul>
             </div>
@@ -191,19 +129,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Siargao.jpg)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Siargao.jpg)">
               <span class="price">₱1,120/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Siargao Island</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Siargao Island</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Surigao del Norte, CARAGA Region,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near NorthEastern Coast</li>
               </ul>
             </div>
@@ -211,19 +147,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Coron\ Island\ Palawan.jpg)">
               <span class="price">₱320/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Coron Island</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Coron Island</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Coron, Palawan,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Island</li>
               </ul>
             </div>
@@ -232,19 +166,17 @@
 
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg)">
               <span class="price">₱520/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Calle Crisologo</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Calle Crisologo</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Vigan, Ilocos Sur,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Streets</li>
               </ul>
             </div>
@@ -252,19 +184,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Intramuros\ Manila.avif)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Intramuros\ Manila.avif)">
               <span class="price">₱220/person</span>
             </a>
             <div class="text p-4">
               <span class="days">4 Days Tour</span>
-              <h3><a href="#">Fort Santiago</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Fort Santiago</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Intramuros, Metro Manila,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Pasig City</li>
               </ul>
             </div>
@@ -272,19 +202,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Taal\ Volcano.webp)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Taal\ Volcano.webp)">
               <span class="price">₱320/person</span>
             </a>
             <div class="text p-4">
               <span class="days">1 Days Tour</span>
-              <h3><a href="#">Taal Volcano</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Taal Volcano</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Talisay and San Nicolas, Batangas,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Lake</li>
               </ul>
             </div>
@@ -292,19 +220,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg)">
               <span class="price">₱290/person</span>
             </a>
             <div class="text p-4">
               <span class="days">2 Days Tour</span>
-              <h3><a href="#">Kawasan Falls</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Kawasan Falls</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Badian, Cebu,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Moalboal, Cebu</li>
               </ul>
             </div>
@@ -312,19 +238,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Mt.\ Pulag.jpg)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Mt.\ Pulag.jpg)">
               <span class="price">₱600/person</span>
             </a>
             <div class="text p-4">
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Mt. Pulag</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Mt. Pulag</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Benguet, Cordillera Administrative Region,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Ifugao</li>
               </ul>
             </div>
@@ -332,19 +256,17 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-            <a href="#" class="img" style="background-image: url(images/Chocolate\ Hills.jpg)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookPlace" style="background-image: url(images/Chocolate\ Hills.jpg)">
               <span class="price">₱520/person</span>
             </a>
             <div class="text p-4">
               <span class="days">2 Days Tour</span>
-              <h3><a href="#">Chocolate Hills</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookPlace">Chocolate Hills</a></h3>
               <p class="location">
                 <span class="fa fa-map-marker"></span> Bohol Province, Bohol,
                 Philippines
               </p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Dauis, Bohol</li>
               </ul>
             </div>
@@ -353,14 +275,90 @@
       </div>
     </div>
   </section>
+  <!-- Modal Pop Up form for Booking a destination place and hotel -->
+  <div class="modal fade" id="bookPlace" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <form action="process.php" method="post" enctype="multipart/form-data" id="booking-form">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Book a Destination</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="firstName">First Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="Enter First Name" name="firstName" required>
+            </div>
+            <label for="lastName">Last Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required>
+            </div>
+            <label for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+              <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+            </div>
 
+            <label for="selectDestination">Select a Destination</label>
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04" name="place">
+                <option selected>Choose</option>
+                <option value="Boracay Island">Boracay Island</option>
+                <option value="Siargao Island">Siargao Island</option>
+                <option value="Coron Island">Coron Island</option>
+                <option value="Calle Crisologo">Calle Crisologo</option>
+                <option value="Fort Santiago">Fort Santiago</option>
+                <option value="Taal Volcano">Taal Volcano</option>
+                <option value="Kawasan Falls">Kawasan Falls</option>
+                <option value="Mt. Pulag">Mt. Pulag</option>
+                <option value="Chocolate Hills">Chocolate Hills</option>
+              </select>
+            </div>
+            <label for="startDate">Start Date</label><br>
+            <div class="input-group">
+              <input type="date" id="startDate" name="startDate">
+            </div>
+            <label for="endDate">End Date</label><br>
+            <div class="input-group">
+              <input type="date" id="endDate" name="endDate">
+            </div>
+            <label for="selectPrice">Select a Price</label>
+            <br>
+            <div class="input-group">
+              <select class="custom-select" id="pricePerDay" name="price">
+                <option selected>Choose</option>
+                <option value="560" data-price="560">₱560</option>
+                <option value="1120" data-price="1,120">₱1120</option>
+                <option value="320" data-price="320">₱320</option>
+                <option value="520" data-price="520">₱520</option>
+                <option value="220" data-price="220">₱220</option>
+                <option value="320" data-price="320">₱320</option>
+                <option value="290" data-price="290">₱290</option>
+                <option value="600" data-price="600">₱600</option>
+                <option value="520" data-price="520">₱520</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-secondary" name="bookPlace" onclick="calculateTourCost()">Book a Destination</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <p id="result"></p>
   <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
           <div class="img" style="background-image: url(images/bg_2.jpg)">
             <div class="overlay"></div>
-            <h2>We Are Travel Ease A Travel Agency</h2>
+            <h2>We Are Travel Ease</h2>
             <p>We can help you decide for your vacation</p>
             <p class="mb-0">
               <a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a>

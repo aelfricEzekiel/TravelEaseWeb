@@ -1,47 +1,3 @@
-<?php
-include "conn.php";
-session_start();
-// thos line of code is for register/creating accounts
-if (isset($_POST['create_touristAccount'])) {
-    $first_name = $_POST['firstName'];
-    $last_name = $_POST['lastName'];
-    $email = $_POST['email'];
-    $password = $_POST['pass'];
-    $confirm_pass = $_POST['confirm_pass'];
-
-    $check_val_fname = mysqli_query($conn, "SELECT * FROM tourist_account WHERE firstName = '$first_name'");
-    $val_row_fn = mysqli_num_rows($check_val_fname);
-
-    if ($val_row_fn <= 0) {
-        $insert_fn = mysqli_query($conn, "INSERT INTO tourist_account VALUES('0', '$first_name', '$last_name', '$email', '$password', '$confirm_pass')");
-
-        if ($insert_fn == true) {
-            ?>
-            <script>
-                alert("Successful!");
-                window.location.href = "touristAcc.php";
-            </script>
-            <?php
-        } else {
-            ?>
-            <script>
-                alert("No data inserted");
-                window.location.href = "touristAcc.php";
-            </script>
-        <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert("First name is already taken!");
-            window.location.href = "touristAcc.php";
-        </script>
-    <?php
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,10 +44,10 @@ if (isset($_POST['create_touristAccount'])) {
             </div>
         </div>
         <!-- this line of code is for register/creating accounts -->
-        <div class="modal1" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="create-account-box" id="createTouristAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
+                    <form action="process.php" method="post" enctype="multipart/form-data">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Create Tourist Account</h5>
                         </div>

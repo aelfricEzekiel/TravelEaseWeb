@@ -1,35 +1,3 @@
-<?php
-	include "conn.php";
-	session_start();
-
-	// This line of code is for tourist login
-	if(isset($_POST['login_tourist'])){
-		$email = $_POST['email'];
-		$password = $_POST['pass'];
-
-		$check = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email' AND password = '$password'");
-		$val_row_emailPass = mysqli_num_rows($check);
-
-		if($val_row_emailPass >= 1){
-			$_SESSION['email'] = $email;
-
-			?>
-				<script>
-					alert("Login Successful!");
-					window.location.href="index.php";
-				</script>
-			<?php
-		} else {
-			?>
-				<script>
-					alert("Incorrect email and password!");
-					window.location.href="login.php";
-				</script>
-			<?php
-		}
-	}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,10 +41,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="login-box" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
+					<form action="process.php" method="post" enctype="multipart/form-data">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Login</h5>
 						</div>
