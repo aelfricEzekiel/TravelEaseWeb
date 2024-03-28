@@ -10,7 +10,7 @@
             </script>
         <?php
     } else {
-        $email= $_SESSION['email'];
+        $email = $_SESSION['email'];
 
         $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
         while($row = mysqli_fetch_object($get_details)){

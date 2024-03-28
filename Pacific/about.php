@@ -115,7 +115,7 @@
             <p>TravelEase highlights the relevant information clearly and concisely. </p>
             <p>The homepage gives a brief description if every vacation place in the Philippines and some services that we have. TravelEase also gives a clear breakdown of plans and pricing, with a button for easy request.</p>
             <p>
-              <a href="#" class="btn btn-primary py-3 px-4">Search Destination</a>
+              <a href="destination.php" class="btn btn-primary py-3 px-4">Search Destination</a>
             </p>
           </div>
         </div>

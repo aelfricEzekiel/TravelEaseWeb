@@ -1,25 +1,24 @@
 <?php
-	include "conn.php";
-	session_start();
+  include "conn.php";
+  session_start();
 
-    if(empty($_SESSION)){
-        ?>
-            <script>
-                alert("Please login first");
-                window.location.href="login.php";
-            </script>
-        <?php
-    } else {
-        $email= $_SESSION['email'];
+  if (empty($_SESSION)) {
+  ?>
+    <script>
+      alert("Please login first");
+      window.location.href = "login.php";
+    </script>
+  <?php
+  } else {
+    $email = $_SESSION['email'];
 
-        $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
-        while($row = mysqli_fetch_object($get_details)){
-            $firstName = $row -> firstName;
-            $lastName = $row -> lastName;
-        }
+    $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
+    while ($row = mysqli_fetch_object($get_details)) {
+      $firstName = $row->firstName;
+      $lastName = $row->lastName;
     }
-    
-    
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,8 +48,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <?php 
-    echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
+  <?php
+  echo "<link rel='stylesheet' href='css/style.css' type='text/css'>"
   ?>
 </head>
 
@@ -58,8 +57,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.php">Travel Ease</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"><i class="fa-solid fa-bars"></i></span>
       </button>
 
@@ -72,7 +70,7 @@
             <a href="about.php" class="nav-link">About</a>
           </li>
           <li class="nav-item active">
-            <a href="destination.php" class="nav-link">Destination</a>
+            <a href="destination.php" class="nav-link">Tours</a>
           </li>
           <li class="nav-item">
             <a href="hotel.php" class="nav-link">Hotel</a>
@@ -98,9 +96,9 @@
         <div class="col-md-9 ftco-animate pb-5 text-center">
           <p class="breadcrumbs">
             <span class="mr-2"><a href="index.php">Home <i class="fa fa-chevron-right"></i></a></span>
-            <span>Tour List <i class="fa fa-chevron-right"></i></span>
+            <span>Tours <i class="fa fa-chevron-right"></i></span>
           </p>
-          <h1 class="mb-0 bread">Tours List</h1>
+          <h1 class="mb-0 bread">Tours</h1>
         </div>
       </div>
     </div>
@@ -275,6 +273,8 @@
       </div>
     </div>
   </section>
+  
+  <p id="result"></p>
   <!-- Modal Pop Up form for Booking a destination place and hotel -->
   <div class="modal fade" id="bookPlace" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -305,7 +305,7 @@
 
             <label for="selectDestination">Select a Destination</label>
             <div class="input-group">
-              <select class="custom-select" id="inputGroupSelect04" name="place">
+              <select class="custom-select" id="inputGroupSelect04" name="place" required>
                 <option selected>Choose</option>
                 <option value="Boracay Island">Boracay Island</option>
                 <option value="Siargao Island">Siargao Island</option>
@@ -317,19 +317,23 @@
                 <option value="Mt. Pulag">Mt. Pulag</option>
                 <option value="Chocolate Hills">Chocolate Hills</option>
               </select>
+
+              <?php 
+                $destination = $_SESSION['place'];
+              ?>
             </div>
             <label for="startDate">Start Date</label><br>
             <div class="input-group">
-              <input type="date" id="startDate" name="startDate">
+              <input type="date" id="startDate" name="startDate" required>
             </div>
             <label for="endDate">End Date</label><br>
             <div class="input-group">
-              <input type="date" id="endDate" name="endDate">
+              <input type="date" id="endDate" name="endDate" required>
             </div>
             <label for="selectPrice">Select a Price</label>
             <br>
             <div class="input-group">
-              <select class="custom-select" id="pricePerDay" name="price">
+              <select class="custom-select" id="pricePerDay" name="price" required>
                 <option selected>Choose</option>
                 <option value="560" data-price="560">₱560</option>
                 <option value="1120" data-price="1,120">₱1120</option>
@@ -342,6 +346,17 @@
                 <option value="520" data-price="520">₱520</option>
               </select>
             </div>
+            <label for="people">Number of People</label>
+            <div class="input-group">
+              <select class="custom-select" id="people" name="people" required>
+                <option selected>Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="reset" class="btn btn-secondary">Reset</button>
@@ -351,7 +366,6 @@
       </div>
     </div>
   </div>
-  <p id="result"></p>
   <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
       <div class="row justify-content-center">
@@ -431,8 +445,7 @@
                       5645</span></a>
                 </li>
                 <li>
-                  <a href="#"><span class="icon fa fa-paper-plane"></span><span
-                      class="text">travelEase@gmail.com</span></a>
+                  <a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">travelEase@gmail.com</span></a>
                 </li>
               </ul>
             </div>
@@ -459,8 +472,7 @@
   <div id="ftco-loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
     </svg>
   </div>
 
@@ -476,8 +488,7 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -1,3 +1,4 @@
+
 <?php
 	include "conn.php";
 	session_start();
@@ -76,24 +77,110 @@
         $start_date = $_POST['startDate'];
         $end_date = $_POST['endDate'];
         $bookPrice = $_POST['price'];
-        
-        $query = "INSERT INTO bookplace VALUES ('0', '$first_name', '$last_name', '$email', '$bookPlace', '$start_date', '$end_date', '$bookPrice')";
-        $insert = mysqli_query($conn, $query);
-        if($insert == true) {
-            ?>
-                <script>
-                    alert("Successful book a destination!");
-                    window.location.href="destination.php";
-                </script>
-            <?php
+        $pax = $_POST['people'];
+
+        $query = "SELECT * FROM bookplace WHERE bookPlace = '$bookPlace' AND bookPrice = '$bookPrice'";
+        $val = mysqli_query($conn, $query);
+        $check_val_query = mysqli_num_rows($val);
+
+        if($check_val_query <= 0){
+            $query = "INSERT INTO bookplace VALUES ('0', '$first_name', '$last_name', '$email', '$bookPlace', '$start_date', '$end_date', '$bookPrice', '$pax')";
+            $insert = mysqli_query($conn, $query);
+
+            if($insert == true) {
+                ?>
+                    <script>
+                        alert("Successfully Booked!");
+                        window.location.href="destination.php";
+                    </script>
+                <?php
+            } else {
+                ?>
+                    <script>
+                        alert("Unsuccesful Booked!");
+                        window.location.href="destination.php";
+                    </script>
+                <?php
+            }
         } else {
             ?>
                 <script>
-                    alert("Unsuccesful booking!");
+                    alert("Destination and price are already taken");
                     window.location.href="destination.php";
                 </script>
             <?php
         }
         
+    } 
+
+    // this line of code is for booking a hotel
+    if(isset($_POST['bookHotel'])){
+        $first_name = $_POST['firstName'];
+        $last_name = $_POST['lastName'];
+        $email = $_POST['email'];
+        $book_hotel = $_POST['hotel'];
+        $start_date = $_POST['startDate'];
+        $end_date = $_POST['endDate'];
+        $book_hotel_price = $_POST['price'];
+        $pax = $_POST['people'];
+
+        $query = "SELECT * FROM book_hotel WHERE hotel = '$book_hotel' AND price = '$book_hotel_price'";
+        $val = mysqli_query($conn, $query);
+        $check_val_query = mysqli_num_rows($val);
+        
+        if($check_val_query <= 0){
+            $query = "INSERT INTO book_hotel VALUES ('0', '$first_name', '$last_name', '$email', '$book_hotel', '$start_date', '$end_date', '$book_hotel_price', '$pax')";
+            $insert = mysqli_query($conn, $query);
+
+            if($insert == true) {
+                ?>
+                    <script>
+                        alert("Successfully Booked!");
+                        window.location.href="hotel.php";
+                    </script>
+                <?php
+            } else {
+                ?>
+                    <script>
+                        alert("Unsuccesful Booked!");
+                        window.location.href="hotel.php";
+                    </script>
+                <?php
+            }
+        } else {
+            ?>
+                <script>
+                    alert("Hotel and price are already taken");
+                    window.location.href="hotel.php";
+                </script>
+            <?php
+        }
+        
+    } 
+
+    // this line of code is for contact
+    if(isset($_POST['submit_message'])){
+        $username = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        
+        $query = "INSERT INTO contact VALUES ('0', '$username', '$email', '$message')";
+        $insert = mysqli_query($conn, $query);
+
+        if($insert == true){
+            ?>
+                <script>
+                    alert("Delivered Message");
+                    window.location.href="contact.php";
+                </script>
+            <?php
+        } else {
+            ?>
+                <script>
+                    alert("No messages delivered");
+                    window.location.href="contact.php";
+                </script>
+            <?php
+        }
     }
 ?>

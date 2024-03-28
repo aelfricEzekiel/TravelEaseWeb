@@ -118,28 +118,20 @@
     <div class="container">
       <div class="row block-9">
         <div class="col-md-6 order-md-last d-flex">
-          <form action="#" class="bg-light p-5 contact-form">
+          <form action="process.php" method="post" class="bg-light p-5 contact-form">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input type="text" class="form-control" name="name" placeholder="Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
+              <input type="email" class="form-control" name="email" placeholder="Email">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
+              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
             </div>
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              <input type="submit" value="Send Message" name="submit_message" class="btn btn-primary py-3 px-5">
             </div>
           </form>
-
-        </div>
-
-        <div class="col-md-6 d-flex">
-          <div id="map" class="bg-white"></div>
         </div>
       </div>
     </div>
@@ -151,9 +143,8 @@
         <div class="col-md-12 text-center">
           <div class="img" style="background-image: url(images/bg_2.jpg);">
             <div class="overlay"></div>
-            <h2>We Are Travel Ease A Travel Agency</h2>
+            <h2>We Are Travel Ease</h2>
             <p>We can help you decide for your vacation</p>
-            <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
           </div>
         </div>
       </div>

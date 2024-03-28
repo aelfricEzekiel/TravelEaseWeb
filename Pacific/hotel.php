@@ -108,8 +108,6 @@
               <h3><a href="#" data-toggle="modal" data-target="#bookHotel">The Piccolo Hotel</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Boracay, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-mountains"></span>Near Western Coast</li>
               </ul>
             </div>
@@ -117,7 +115,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/Hang\ Loose\ Hotel.jpg);">
+            <a href="#" data-toggle="modal" data-target="#bookHotel"  class="img" style="background-image: url(images/Hang\ Loose\ Hotel.jpg);">
               <span class="price">₱3,500/person</span>
             </a>
             <div class="text p-4">
@@ -128,11 +126,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Hang Loose Hostel</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">Hang Loose Hostel</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> General Luna, Siargao Island Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near NorthEastern Coast</li>
               </ul>
             </div>
@@ -140,7 +136,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/hotel-resto-3.jpg);">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/hotel-resto-3.jpg);">
               <span class="price">₱1,250/person</span>
             </a>
             <div class="text p-4">
@@ -152,12 +148,10 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">MO2 Westown Lagoon</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">MO2 Westown Lagoon</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Coron - Busuanga Rd, Coron, Palawan,
                 Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Island</li>
               </ul>
             </div>
@@ -166,7 +160,7 @@
 
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/Hotel\ Veneto\ de\ Vigan.jpg);">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/Hotel\ Veneto\ de\ Vigan.jpg);">
               <span class="price">₱1,870/person</span>
             </a>
             <div class="text p-4">
@@ -178,11 +172,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Hotel Veneto de Vigan</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">Hotel Veneto de Vigan</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Vigan City, Ilocos Sur, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Streets</li>
               </ul>
             </div>
@@ -190,7 +182,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/King\'s\ Ford\ Hotel.webp);">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/King\'s\ Ford\ Hotel.webp);">
               <span class="price">₱2,200/person</span>
             </a>
             <div class="text p-4">
@@ -201,11 +193,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">4 Days Tour</span>
-              <h3><a href="#">Kingsford Hotel</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">Kingsford Hotel</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> J.W. Diokno Bldvd, Tambo, Parañaque, Metro Manila, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Manila Bay</li>
               </ul>
             </div>
@@ -213,7 +203,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/Pontefino\ Hotel\ and\ Residences.webp);">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/Pontefino\ Hotel\ and\ Residences.webp);">
               <span class="price">₱3,120/person</span>
             </a>
             <div class="text p-4">
@@ -224,11 +214,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">1 Days Tour</span>
-              <h3><a href="#">Pontefino Hotel and Residences</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">Pontefino Hotel and Residences</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Pastor Village, Gulod Labac, Batangas, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Batangas</li>
               </ul>
             </div>
@@ -236,7 +224,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/Rufana\ Suites.jpg);">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/Rufana\ Suites.jpg);">
               <span class="price">₱1,770/person</span>
             </a>
             <div class="text p-4">
@@ -247,11 +235,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">2 Days Tour</span>
-              <h3><a href="#">Rufana Suites</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">Rufana Suites</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Barbiera St Paramayon Poblacion East, 6032 Moalboal, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Kawasan Falls</li>
               </ul>
             </div>
@@ -259,7 +245,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/The\ Orchard\ Hotel.webp);">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/The\ Orchard\ Hotel.webp);">
               <span class="price">₱4,400/person</span>
             </a>
             <div class="text p-4">
@@ -271,11 +257,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">The Orchard Hotel</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">The Orchard Hotel</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> 49 Legarda Road, Baguio City, Baguio, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Baguio</li>
               </ul>
             </div>
@@ -283,7 +267,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/Casa\ Aguelo.webp)">
+            <a href="#" class="img" data-toggle="modal" data-target="#bookHotel" style="background-image: url(images/Casa\ Aguelo.webp)">
               <span class="price">₱5,500/person</span>
             </a>
             <div class="text p-4">
@@ -294,11 +278,9 @@
                 <span class="fa fa-star"></span>
               </p>
               <span class="days">3 Days Tour</span>
-              <h3><a href="#">Casa Aguelo</a></h3>
+              <h3><a href="#" data-toggle="modal" data-target="#bookHotel">Casa Aguelo</a></h3>
               <p class="location"><span class="fa fa-map-marker"></span> Carmen, Bohol, Philippines</p>
               <ul>
-                <li><span class="flaticon-shower"></span>2</li>
-                <li><span class="flaticon-king-size"></span>3</li>
                 <li><span class="flaticon-sun-umbrella"></span>Near Chocolate Hills</li>
               </ul>
             </div>
@@ -336,43 +318,54 @@
               <input type="email" class="form-control" placeholder="Enter email" name="email" required>
             </div>
 
-            <label for="selectDestination">Select a Destination</label>
+            <label for="selectDestination">Select a Hotel</label>
             <div class="input-group">
-              <select class="custom-select" id="inputGroupSelect04" name="place">
+              <select class="custom-select" id="selectHotel" name="hotel" required>
                 <option selected>Choose</option>
-                <option value="Boracay Island">Boracay Island</option>
-                <option value="Siargao Island">Siargao Island</option>
-                <option value="Coron Island">Coron Island</option>
-                <option value="Calle Crisologo">Calle Crisologo</option>
-                <option value="Fort Santiago">Fort Santiago</option>
-                <option value="Taal Volcano">Taal Volcano</option>
-                <option value="Kawasan Falls">Kawasan Falls</option>
-                <option value="Mt. Pulag">Mt. Pulag</option>
-                <option value="Chocolate Hills">Chocolate Hills</option>
+                <option value="The Piccolo Hotel">The Piccolo Hotel</option>
+                <option value="Hang Loose Hotel">Hang Loose Hotel</option>
+                <option value="MO2 Westown Lagoon">MO2 Westown Lagoon</option>
+                <option value="Hotel Veneto de Vigan">Hotel Veneto de Vigan</option>
+                <option value="Kingsford Hotel">Kingsford Hotel</option>
+                <option value="Pontefino Hotel and Residences">Pontefino Hotel and Residences</option>
+                <option value="Rufana Suites">Rufana Suites</option>
+                <option value="The Orchard Hotel">The Orchard Hotel</option>
+                <option value="Casa Aguelo">Casa Aguelo</option>
               </select>
             </div>
             <label for="startDate">Start Date</label><br>
             <div class="input-group">
-              <input type="date" id="startDate" name="startDate">
+              <input type="date" id="startDate" name="startDate" required>
             </div>
             <label for="endDate">End Date</label><br>
             <div class="input-group">
-              <input type="date" id="endDate" name="endDate">
+              <input type="date" id="endDate" name="endDate" required>
             </div>
             <label for="selectPrice">Select a Price</label>
             <br>
             <div class="input-group">
-              <select class="custom-select" id="pricePerDay" name="price">
+              <select class="custom-select" id="pricePerDay" name="price" required>
                 <option selected>Choose</option>
-                <option value="560" data-price="560">₱560</option>
-                <option value="1120" data-price="1,120">₱1120</option>
-                <option value="320" data-price="320">₱320</option>
-                <option value="520" data-price="520">₱520</option>
-                <option value="220" data-price="220">₱220</option>
-                <option value="320" data-price="320">₱320</option>
-                <option value="290" data-price="290">₱290</option>
-                <option value="600" data-price="600">₱600</option>
-                <option value="520" data-price="520">₱520</option>
+                <option value="2400" data-price="2400">₱2,400</option>
+                <option value="3500" data-price="3500">₱3,500</option>
+                <option value="1250" data-price="1250">₱1,250</option>
+                <option value="1870" data-price="1870">₱1,870</option>
+                <option value="2200" data-price="2200">₱2,200</option>
+                <option value="3120" data-price="3120">₱3,120</option>
+                <option value="1770" data-price="1770">₱1,770</option>
+                <option value="4400" data-price="4400">₱4,400</option>
+                <option value="5500" data-price="5500">₱5,500</option>
+              </select>
+            </div>
+            <label for="people">Number of People</label>
+            <div class="input-group">
+              <select class="custom-select" id="people" name="people" required>
+                <option selected>Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
             </div>
           </div>

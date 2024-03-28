@@ -285,20 +285,18 @@
   }
   
   function calculateTourCost(){
-    const startDate = new Date(document.getElementById("startDate").value);
-    const endDate = new Date(document.getElementById("endDate").value);
-    const pricePerDay = parseFloat(document.getElementById("pricePerDay").value);
-  
-    if(startDate > endDate) {
-      docuke("End date should be later than start date");
-      return;
-    }
-  
-    const daysDifference = calculateDaysDifference(startDate, endDate);
-    const totalPrice = daysDifference * pricePerDay;
+      const startDate = new Date(document.getElementById("startDate").value);
+      const endDate = new Date(document.getElementById("endDate").value);
+      const pricePerDay = parseFloat(document.getElementById("pricePerDay").value);
 
-
-    document.querySelector("#result").innerHTML = 'Number of days: ${daysDifference}<br>Total price: $${totalPrice.toFixed(2)}';
+      if(startDate > endDate) {
+        document.getElementById("result").innerHTML = "End date should be later than start date";
+        return;
+      }
     
+      const daysDifference = calculateDaysDifference(startDate, endDate);
+      const totalPrice = daysDifference * pricePerDay;
+
+      const result = document.getElementById("result").innerHTML = 'Number of days: ${daysDifference}<br>Total price: $${totalPrice.toFixed(2)}';
   }
 })(jQuery);
