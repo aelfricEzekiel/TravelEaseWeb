@@ -3,19 +3,14 @@
   session_start();
 
   if (empty($_SESSION)) {
-  ?>
-    <script>
-      alert("Please login first");
-      window.location.href = "login.php";
-    </script>
-  <?php
+    header("Location: login.php");
   } else {
     $email = $_SESSION['email'];
 
     $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
     while ($row = mysqli_fetch_object($get_details)) {
-      $firstName = $row->firstName;
-      $lastName = $row->lastName;
+      $firstName = $row-> firstName;
+      $lastName = $row-> lastName;
     }
   }
 
@@ -81,7 +76,16 @@
           <li class="nav-item">
             <a href="contact.php" class="nav-link">Contact</a>
           </li>
-          <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+          <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
+						<ul class="dropdown-menu" aria-labelledby="dropDownProfile"> 
+							<li class="dropdown-item">
+								<a href="#" class="dropdown-item"><?php echo $firstName . " " . $lastName ?></a>
+							</li>
+							<li class="dropdown-item">
+								<a href="logout.php" class="dropdown-item">Logout</a>
+							</li>
+						</ul>
+					</li>
         </ul>
       </div>
     </div>
@@ -273,8 +277,6 @@
       </div>
     </div>
   </section>
-  
-  <p id="result"></p>
   <!-- Modal Pop Up form for Booking a destination place and hotel -->
   <div class="modal fade" id="bookPlace" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -295,7 +297,7 @@
             <label for="lastName">Last Name</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-              <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required>
+              <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName"required>
             </div>
             <label for="email">Email</label>
             <div class="input-group">
@@ -306,7 +308,7 @@
             <label for="selectDestination">Select a Destination</label>
             <div class="input-group">
               <select class="custom-select" id="inputGroupSelect04" name="place" required>
-                <option selected>Choose</option>
+                <option value="">Choose</option>
                 <option value="Boracay Island">Boracay Island</option>
                 <option value="Siargao Island">Siargao Island</option>
                 <option value="Coron Island">Coron Island</option>
@@ -317,10 +319,6 @@
                 <option value="Mt. Pulag">Mt. Pulag</option>
                 <option value="Chocolate Hills">Chocolate Hills</option>
               </select>
-
-              <?php 
-                $destination = $_SESSION['place'];
-              ?>
             </div>
             <label for="startDate">Start Date</label><br>
             <div class="input-group">
@@ -334,7 +332,7 @@
             <br>
             <div class="input-group">
               <select class="custom-select" id="pricePerDay" name="price" required>
-                <option selected>Choose</option>
+                <option value="">Choose</option>
                 <option value="560" data-price="560">₱560</option>
                 <option value="1120" data-price="1,120">₱1120</option>
                 <option value="320" data-price="320">₱320</option>
@@ -349,7 +347,7 @@
             <label for="people">Number of People</label>
             <div class="input-group">
               <select class="custom-select" id="people" name="people" required>
-                <option selected>Choose</option>
+                <option value="">Choose</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -374,9 +372,6 @@
             <div class="overlay"></div>
             <h2>We Are Travel Ease</h2>
             <p>We can help you decide for your vacation</p>
-            <p class="mb-0">
-              <a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a>
-            </p>
           </div>
         </div>
       </div>

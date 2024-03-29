@@ -3,12 +3,7 @@
 	session_start();
 
     if(empty($_SESSION)){
-        ?>
-            <script>
-                alert("Please login first");
-                window.location.href="login.php";
-            </script>
-        <?php
+      header("Location: login.php");
     } else {
         $email= $_SESSION['email'];
 
@@ -65,11 +60,20 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="destination.php" class="nav-link">Destination</a></li>
+          <li class="nav-item"><a href="destination.php" class="nav-link">Tours</a></li>
           <li class="nav-item active"><a href="hotel.php" class="nav-link">Hotel</a></li>
           <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+          <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
+						<ul class="dropdown-menu" aria-labelledby="dropDownProfile"> 
+							<li class="dropdown-item">
+								<a href="#" class="dropdown-item"><?php echo $firstName . " " . $lastName ?></a>
+							</li>
+							<li class="dropdown-item">
+								<a href="logout.php" class="dropdown-item">Logout</a>
+							</li>
+						</ul>
+					</li>
         </ul>
       </div>
     </div>
@@ -386,7 +390,6 @@
             <div class="overlay"></div>
             <h2>We Are Travel Ease</h2>
             <p>We can help you decide for your vacation</p>
-            <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
           </div>
         </div>
       </div>

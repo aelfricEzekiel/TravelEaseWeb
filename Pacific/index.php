@@ -3,12 +3,7 @@
 	session_start();
 
     if(empty($_SESSION)){
-        ?>
-            <script>
-                alert("Please login first");
-                window.location.href="login.php";
-            </script>
-        <?php
+		header("Location: login.php");
     } else {
         $email = $_SESSION['email'];
 
@@ -65,11 +60,20 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="destination.php" class="nav-link">Destination</a></li>
+					<li class="nav-item"><a href="destination.php" class="nav-link">Tours</a></li>
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-					<li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
+						<ul class="dropdown-menu" aria-labelledby="dropDownProfile"> 
+							<li class="dropdown-item">
+								<a href="#" class="dropdown-item"><?php echo $firstName . " " . $lastName ?></a>
+							</li>
+							<li class="dropdown-item">
+								<a href="logout.php" class="dropdown-item">Logout</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -154,7 +158,7 @@
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">TravelEase Provide Places</span>
+					<span class="subheading">Travel Ease Provide Places</span>
 					<h2 class="mb-4">Select Your Destination</h2>
 				</div>
 			</div>
@@ -271,17 +275,15 @@
 			<div class="row">
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/boracay.webp);">
+						<a href="desination.php" class="img" style="background-image: url(images/boracay.webp);">
 							<span class="price">₱500/person</span>
 						</a>
 						<div class="text p-4">
 							<span class="days">4 Days Tour</span>
-							<h3><a href="#searchPlace">Boracay Island</a></h3>
+							<h3><a href="destination.php">Boracay Island</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Aklan, Western Visayas,
 								Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-mountains"></span>Near Western Coast</li>
 							</ul>
 						</div>
@@ -289,7 +291,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Siargao.jpg);">
+						<a href="destination.php" class="img" style="background-image: url(images/Siargao.jpg);">
 							<span class="price">₱530/person</span>
 						</a>
 						<div class="text p-4">
@@ -298,8 +300,6 @@
 							<p class="location"><span class="fa fa-map-marker"></span> Surigao del Norte, Ilocos Sur,
 								Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near NorthEastern Coast</li>
 							</ul>
 						</div>
@@ -307,7 +307,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg);">
+						<a href="destination.php" class="img" style="background-image: url(images/Coron\ Island\ Palawan.jpg);">
 							<span class="price">₱650/person</span>
 						</a>
 						<div class="text p-4">
@@ -315,8 +315,6 @@
 							<h3><a href="destination.php">Coron Island</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Coron, Palawan, Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Island</li>
 							</ul>
 						</div>
@@ -325,7 +323,7 @@
 
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg);">
+						<a href="destination.php" class="img" style="background-image: url(images/Calle\ Crisologo\ Vigan.jpg);">
 							<span class="price">₱420/person</span>
 						</a>
 						<div class="text p-4">
@@ -334,8 +332,6 @@
 							<p class="location"><span class="fa fa-map-marker"></span> Vigan, Ilocos Sur, Philippines
 							</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Streets</li>
 							</ul>
 						</div>
@@ -343,7 +339,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Intramuros\ Manila.avif);">
+						<a href="destination.php" class="img" style="background-image: url(images/Intramuros\ Manila.avif);">
 							<span class="price">₱350/person</span>
 						</a>
 						<div class="text p-4">
@@ -352,8 +348,6 @@
 							<p class="location"><span class="fa fa-map-marker"></span> Intramuros, Metro Manila,
 								Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Pasig City</li>
 							</ul>
 						</div>
@@ -361,7 +355,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Taal\ Volcano.webp);">
+						<a href="destination.php" class="img" style="background-image: url(images/Taal\ Volcano.webp);">
 							<span class="price">₱390/person</span>
 						</a>
 						<div class="text p-4">
@@ -370,8 +364,6 @@
 							<p class="location"><span class="fa fa-map-marker"></span> Talisay and San Nicolas,
 								Batangas, Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Lake</li>
 							</ul>
 						</div>
@@ -379,7 +371,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg);">
+						<a href="destination.php" class="img" style="background-image: url(images/Kawasan\ Falls\ Cebu.jpg);">
 							<span class="price">₱430/person</span>
 						</a>
 						<div class="text p-4">
@@ -387,8 +379,6 @@
 							<h3><a href="destination.php">Kawasan Falls</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Badian, Cebu, Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Moalboal, Cebu</li>
 							</ul>
 						</div>
@@ -396,7 +386,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
+						<a href="destination.php" class="img" style="background-image: url(images/Mt.\ Pulag.jpg);">
 							<span class="price">₱600/person</span>
 						</a>
 						<div class="text p-4">
@@ -405,8 +395,6 @@
 							<p class="location"><span class="fa fa-map-marker"></span> Benguet, Cordillera
 								Administrative Region, Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Ifugao</li>
 							</ul>
 						</div>
@@ -414,7 +402,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/Chocolate\ Hills.jpg);">
+						<a href="destination.php" class="img" style="background-image: url(images/Chocolate\ Hills.jpg);">
 							<span class="price">₱640/person</span>
 						</a>
 						<div class="text p-4">
@@ -423,8 +411,6 @@
 							<p class="location"><span class="fa fa-map-marker"></span> Bohol Province, Bohol,
 								Philippines</p>
 							<ul>
-								<li><span class="flaticon-shower"></span>2</li>
-								<li><span class="flaticon-king-size"></span>3</li>
 								<li><span class="flaticon-sun-umbrella"></span>Near Dauis, Bohol</li>
 							</ul>
 						</div>
@@ -683,9 +669,8 @@
 				<div class="col-md-12 text-center">
 					<div class="img" style="background-image: url(images/bg_2.jpg);">
 						<div class="overlay"></div>
-						<h2>We Are Travel Ease A Travel Agency</h2>
+						<h2>We Are Travel Ease</h2>
 						<p>We can help you decide for your vacation</p>
-						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
 					</div>
 				</div>
 			</div>

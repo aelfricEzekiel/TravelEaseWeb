@@ -285,6 +285,10 @@
   }
   
   function calculateTourCost(){
+    const form = document.getElementById("booking-form");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      
       const startDate = new Date(document.getElementById("startDate").value);
       const endDate = new Date(document.getElementById("endDate").value);
       const pricePerDay = parseFloat(document.getElementById("pricePerDay").value);
@@ -298,5 +302,6 @@
       const totalPrice = daysDifference * pricePerDay;
 
       const result = document.getElementById("result").innerHTML = 'Number of days: ${daysDifference}<br>Total price: $${totalPrice.toFixed(2)}';
+    });
   }
 })(jQuery);

@@ -14,21 +14,11 @@
 		if($val_row_emailPass >= 1){
 			$_SESSION['email'] = $email;
 
-			?>
-				<script>
-					alert("Login Successful!");
-					window.location.href="index.php";
-				</script>
-			<?php
+            header("Location: index.php");
 		} else {
-			?>
-				<script>
-					alert("Incorrect email and password!");
-					window.location.href="login.php";
-				</script>
-			<?php
+            header("Location: login.php");
 		}
-	}
+	} 
 
     // this line of code is for register/creating accounts
     if (isset($_POST['create_touristAccount'])) {
