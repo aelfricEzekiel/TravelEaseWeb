@@ -6451,6 +6451,7 @@ a.close.disabled {
   overflow: hidden;
   outline: 0;
 }
+/* Admin form box */
 
 .modal-dialog {
   position: relative;

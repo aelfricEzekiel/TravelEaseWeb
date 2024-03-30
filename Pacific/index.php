@@ -64,13 +64,13 @@
 					<li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
+					<li class="nav-item dropdown"><a href="#" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropDownProfile"> 
 							<li class="dropdown-item">
-								<a href="#" class="dropdown-item"><?php echo $firstName . " " . $lastName ?></a>
+								<a href="#" class="dropdown-item"><i class="fa-solid fa-user"></i> <?php echo $firstName . " " . $lastName ?></a>
 							</li>
 							<li class="dropdown-item">
-								<a href="logout.php" class="dropdown-item">Logout</a>
+								<a href="logout.php" class="dropdown-item"><i class="fas fa-sign-out"></i> Logout</a>
 							</li>
 						</ul>
 					</li>
@@ -485,8 +485,8 @@
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Justin Paolo</p>
+											<span class="position">Sta. Barbara, Iloilo</span>
 										</div>
 									</div>
 								</div>
@@ -507,8 +507,8 @@
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Gabriel Limsiaco</p>
+											<span class="position">Molo, Iloilo City</span>
 										</div>
 									</div>
 								</div>
@@ -529,8 +529,8 @@
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Taylor Swift</p>
+											<span class="position">USA</span>
 										</div>
 									</div>
 								</div>
@@ -551,8 +551,8 @@
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Park Seo Jeon</p>
+											<span class="position"> South Korea</span>
 										</div>
 									</div>
 								</div>
@@ -573,8 +573,8 @@
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Enhypen</p>
+											<span class="position">South Korea</span>
 										</div>
 									</div>
 								</div>
@@ -598,7 +598,7 @@
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.php" class="block-20" style="background-image: url('images/blog\ 1.jpg');">
+						<a href="blog.php" class="block-20" style="background-image: url('images/blog\ 1.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -613,13 +613,13 @@
 							<h3 class="heading"><a href="blog.php">Popular Destination in the Philippines</a></h3>
 							<h3 class="heading"><a href="blog.php">Siargao Island</a></h3>
 							<p>Siargao is a tear-drop shaped island in the Philippine Sea situated 196 kilometers southeast of Tacloban.</p>
-							<p><a href="#" class="btn btn-primary">Read more</a></p>
+							<p><a href="blog.php" class="btn btn-primary">Read more</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="blog-single.php" class="block-20" style="background-image: url('images/blog\ 2.jpg');">
+						<a href="blog.php" class="block-20" style="background-image: url('images/blog\ 2.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -634,13 +634,13 @@
 							<h3 class="heading"><a href="blog.php">Popular Destination in the Philippines</a></h3>
 							<h3 class="heading"><a href="blog.php">Boracay</a></h3>
 							<p>Boracay is popular for its beaches and blessed with a long stretch of powdery white sand, crystal clear and azure waters, and a stunning sunset.</p>
-							<p><a href="#" class="btn btn-primary">Read more</a></p>
+							<p><a href="blog.php" class="btn btn-primary">Read more</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.php" class="block-20" style="background-image: url('images/blog\ 4.jpg');">
+						<a href="blog.php" class="block-20" style="background-image: url('images/blog\ 4.jpg');">
 						</a>
 						<div class="text">
 							<div class="d-flex align-items-center mb-4 topp">
@@ -655,7 +655,7 @@
 							<h3 class="heading"><a href="blog.php">Popular Destination in the Philippines</a></h3>
 							<h3 class="heading"><a href="blog.php">Kawasan Falls</a></h3>
 							<p>The Kawasan Falls is a three-stage cascade of clear turquoise water from mountain springs located in the jungles of the Cebu island.</p>
-							<p><a href="#" class="btn btn-primary">Read more</a></p>
+							<p><a href="blog.php" class="btn btn-primary">Read more</a></p>
 						</div>
 					</div>
 				</div>
@@ -746,8 +746,6 @@
 			</div>
 		</div>
 	</footer>
-
-
 
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen">

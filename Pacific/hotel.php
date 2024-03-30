@@ -5,7 +5,7 @@
     if(empty($_SESSION)){
       header("Location: login.php");
     } else {
-        $email= $_SESSION['email'];
+        $email = $_SESSION['email'];
 
         $get_details = mysqli_query($conn, "SELECT * FROM tourist_account WHERE email = '$email'");
         while($row = mysqli_fetch_object($get_details)){
@@ -64,7 +64,7 @@
           <li class="nav-item active"><a href="hotel.php" class="nav-link">Hotel</a></li>
           <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-          <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
+          <li class="nav-item dropdown"><a href="#" class="nav-link" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropDownProfile"> 
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item"><?php echo $firstName . " " . $lastName ?></a>
@@ -325,7 +325,7 @@
             <label for="selectDestination">Select a Hotel</label>
             <div class="input-group">
               <select class="custom-select" id="selectHotel" name="hotel" required>
-                <option selected>Choose</option>
+                <option value="">Choose</option>
                 <option value="The Piccolo Hotel">The Piccolo Hotel</option>
                 <option value="Hang Loose Hotel">Hang Loose Hotel</option>
                 <option value="MO2 Westown Lagoon">MO2 Westown Lagoon</option>
@@ -339,17 +339,17 @@
             </div>
             <label for="startDate">Start Date</label><br>
             <div class="input-group">
-              <input type="date" id="startDate" name="startDate" required>
+              <input type="date" class="custom-select" id="startDate" name="startDate" required>
             </div>
             <label for="endDate">End Date</label><br>
             <div class="input-group">
-              <input type="date" id="endDate" name="endDate" required>
+              <input type="date" class="custom-select"  id="endDate" name="endDate" required>
             </div>
             <label for="selectPrice">Select a Price</label>
             <br>
             <div class="input-group">
               <select class="custom-select" id="pricePerDay" name="price" required>
-                <option selected>Choose</option>
+                <option value="">Choose</option>
                 <option value="2400" data-price="2400">₱2,400</option>
                 <option value="3500" data-price="3500">₱3,500</option>
                 <option value="1250" data-price="1250">₱1,250</option>
@@ -364,7 +364,7 @@
             <label for="people">Number of People</label>
             <div class="input-group">
               <select class="custom-select" id="people" name="people" required>
-                <option selected>Choose</option>
+                <option value="">Choose</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

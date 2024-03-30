@@ -65,7 +65,7 @@
           <li class="nav-item"><a href="hotel.php" class="nav-link">Hotel</a></li>
           <li class="nav-item active"><a href="blog.php" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-          <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
+          <li class="nav-item dropdown"><a href="#" class="nav-link" role="button" data-toggle="dropdown" aria-expanded="false" id="dropDownProfile"><i class="fa-solid fa-user"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropDownProfile"> 
 							<li class="dropdown-item">
 								<a href="#" class="dropdown-item"><?php echo $firstName . " " . $lastName ?></a>
@@ -404,9 +404,9 @@
               <ul>
                 <li><span class="icon fa fa-map-marker"></span><span class="text">SM City Iloilo,
                   TravelEase Agency 2nd Floor, Mandurriao Iloilo City, Philippines</span></li>
-                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+63 989 321
+                <li><a href="contact.php"><span class="icon fa fa-phone"></span><span class="text">+63 989 321
                   5645</span></a></li>
-                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                <li><a href="contact.php"><span class="icon fa fa-paper-plane"></span><span
                       class="text">travelEase@gmail.com</span></a></li>
               </ul>
             </div>

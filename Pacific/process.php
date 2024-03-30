@@ -173,4 +173,23 @@
             <?php
         }
     }
+
+    // this line of code is for admin login form
+    if(isset($_POST['adminLogin'])){
+        $email = $_POST['email'];
+        $password = $_POST['pass'];
+
+        $query = "SELECT * FROM admin WHERE email = '$email' AND pass = '$password'";
+        $val_admin = mysqli_query($conn, $query);
+        $check = mysqli_num_rows($val_admin);
+
+        if($check >= 1){
+            $_SESSION['email'] = $email;
+            
+            header("Location: Admin Dashboard/index.php");
+        } else {
+            header("Location: admin.php");
+        }
+
+    }
 ?>

@@ -301,7 +301,7 @@
       const daysDifference = calculateDaysDifference(startDate, endDate);
       const totalPrice = daysDifference * pricePerDay;
 
-      const result = document.getElementById("result").innerHTML = 'Number of days: ${daysDifference}<br>Total price: $${totalPrice.toFixed(2)}';
+      document.getElementById("result").innerHTML = 'Number of days: ${daysDifference}<br>Total price: $${totalPrice.toFixed(2)}';
     });
   }
 })(jQuery);

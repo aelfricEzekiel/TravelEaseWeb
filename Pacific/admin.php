@@ -39,38 +39,36 @@
 					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
 					<p class="caps">Travel to the any corner of the world, without going around in circles</p>
 				</div>
-				<a href="video/Wake Up in the Philippines _ Philippines Tourism Ad.mp4" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-					<span class="fa fa-play"></span>
-				</a>
+				<div class="login-box" id="loginTourist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form action="process.php" method="post" enctype="multipart/form-data">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Admin</h5>
+								</div>
+								<div class="modal-body">
+									<label for="email">Email</label>
+									<div class="input-group">
+										<span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
+										<input type="email" class="form-control" placeholder="Enter email" name="email" required>
+									</div>
+									<label for="password">Password</label>
+									<div class="input-group">
+										<span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+										<input type="password" class="form-control" placeholder="Enter password" name="pass" required>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<a href="admin.php" class="btn btn-secondary"> Admin</a> 
+									<a href="touristAcc.php" class="btn btn-secondary">Register</a>
+									<a href="login.php" class="btn btn-secondary">Back</a>
+									<button type="submit" class="btn btn-secondary" name="adminLogin">Login</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
-            <div class="modal" id="adminLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form action="#" method="post" enctype="multipart/form-data">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Login Admin Account</h5>
-                                <button type="button" class="btn-close" data-dismiss="modal"><i class="fa-regular fa-x"></i></button>
-                            </div>
-                            <div class="modal-body">
-                                <label for="email">Email</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fa-solid fa-envelope-open"></i></span>
-                                    <input type="text" class="form-control" placeholder="Enter email" name="email">
-                                </div>
-                                <label for="password">Password</label>	
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-                                    <input type="password" class="form-control" placeholder="Enter password" name="pass">
-                                </div>	
-                            </div>
-                            <div class="modal-footer">
-                                <button type="reset" class="btn btn-secondary">Reset</button>
-                                <button type="submit" class="btn btn-success" name="admin_login">Login</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
 		</div>
 	</div>
 
