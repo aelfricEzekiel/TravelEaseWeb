@@ -61,7 +61,8 @@ if (empty($_SESSION)) {
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -69,18 +70,18 @@ if (empty($_SESSION)) {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Destination</span>
+                    <span>Tours</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tourBooking.php">Tours Booking</a>
+                        <a class="collapse-item active" href="tourBooking.php">Tours Booking</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Hotels</span>
                 </a>
@@ -88,6 +89,19 @@ if (empty($_SESSION)) {
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item active" href="hotelBooking.php">Hotel Booking</a>
                     </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Contact</span>
+                </a>
+                <div id="collapseContact" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item active" href="contact.php">Contacts</a>
+                    </div>
+                </div>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

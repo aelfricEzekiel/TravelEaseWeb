@@ -337,11 +337,11 @@
                 <option value="Casa Aguelo">Casa Aguelo</option>
               </select>
             </div>
-            <label for="startDate">Start Date</label><br>
+            <label for="startDate">Check-in Date</label><br>
             <div class="input-group">
               <input type="date" class="custom-select" id="startDate" name="startDate" required>
             </div>
-            <label for="endDate">End Date</label><br>
+            <label for="endDate">Check-out Date</label><br>
             <div class="input-group">
               <input type="date" class="custom-select"  id="endDate" name="endDate" required>
             </div>

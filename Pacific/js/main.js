@@ -286,12 +286,13 @@
   
   function calculateTourCost(){
     const form = document.getElementById("booking-form");
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       
       const startDate = new Date(document.getElementById("startDate").value);
       const endDate = new Date(document.getElementById("endDate").value);
-      const pricePerDay = parseFloat(document.getElementById("pricePerDay").value);
+      const pricePerDay = parseInt(document.getElementById("pricePerDay").value);
 
       if(startDate > endDate) {
         document.getElementById("result").innerHTML = "End date should be later than start date";

@@ -10,7 +10,7 @@
   rangeS.forEach(function(el) {
     el.oninput = function() {
       var slide1 = parseFloat(rangeS[0].value),
-        	slide2 = parseFloat(rangeS[1].value);
+        slide2 = parseFloat(rangeS[1].value);
 
       if (slide1 > slide2) {
 				[slide1, slide2] = [slide2, slide1];

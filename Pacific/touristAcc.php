@@ -79,8 +79,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="admin.php" class="btn btn-secondary">Admin</a>
-                            <a href="login.php" class="btn btn-secondary">Tourist</a>
+                            <a href="login.php" class="btn btn-secondary">Back</a>
                             <button type="submit" class="btn btn-secondary" name="create_touristAccount">Create Account</button>
                         </div>
                     </form>

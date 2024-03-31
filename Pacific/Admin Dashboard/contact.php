@@ -1,20 +1,19 @@
 <?php
-	include "../conn.php";
-	session_start();
+include "../conn.php";
+session_start();
 
-    if(empty($_SESSION)){
-		header("Location: ../admin.php");
-    } else {
-        $email = $_SESSION['email'];
+if (empty($_SESSION)) {
+    header("Location: ../admin.php");
+} else {
+    $email = $_SESSION['email'];
 
-        $get_data = mysqli_query($conn, "SELECT * FROM admin WHERE email = '$email'");
-        while($row = mysqli_fetch_object($get_data)){
-            $firstName = $row -> firstName;
-            $lastName = $row -> lastName;
-        }
+    $get_data = mysqli_query($conn, "SELECT * FROM admin WHERE email = '$email'");
+    while ($row = mysqli_fetch_object($get_data)) {
+        $firstName = $row->firstName;
+        $lastName = $row->lastName;
     }
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tour Booking Table</title>
+    <title>SB Admin 2 - Color Utilities</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,9 +33,9 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Font AWesome Links -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body id="page-top">
@@ -62,21 +61,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-                    aria-controls="collapseTwo">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Tours</span>
                 </a>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tourBooking.php">Tour Booking</a>
+                        <a class="collapse-item active" href="tourBooking.php">Tours Booking</a>
                     </div>
                 </div>
             </li>
@@ -89,28 +87,33 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="hotelBooking.php">Hotel Bookings</a>
+                        <a class="collapse-item" href="hotelBooking.php">Hotel Booking</a>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Contacts -->
+                        <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Contacts</span>
+                </a>
+                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item active" href="contact.php">Contacts</a>
                     </div>
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Contacts</span>
-                </a>
-                <div id="collapseContact" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="contact.php">Contacts</a>
-                    </div>
-                </div>
-            </li>
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider d-none d-md-block">
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -122,7 +125,6 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -132,15 +134,12 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $firstName . " " . $lastName?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $firstName . " " . $lastName ?></span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -160,49 +159,38 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tour Booking Table</h1>
+                    <h1 class="h3 mb-1 text-gray-800">Contacts Table</h1>
+                    <!-- Content Row -->
                     <div class="row">
+                        <!-- Tables of Hotel Booking -->
                         <table class="table">
                             <thead>
-                                <th scope="col">ID</th>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Tour</th>
-                                <th scope="col">Check-in Date</th>
-                                <th scope="col">Check-out Date</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">People</th>
-                                <th scope="col">Delete</th>
-                                <th scope="col">Edit</th>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Message</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
                             </thead>
                             <tbody>
-                                <?php 
-                                    $query = "SELECT * FROM bookplace";
-                                    $table_tour_data = mysqli_query($conn, $query);
-
-                                    while($display_data = mysqli_fetch_array($table_tour_data)){
-                                        ?>  
+                                <?php
+                                    $query = "SELECT * FROM contact";
+                                    $table_data = mysqli_query($conn, $query);
+                                    while ($display_data = mysqli_fetch_array($table_data)) {
+                                        ?>
                                             <tr>
                                                 <th scope="row"><?php echo $display_data['id'] ?></th>
-                                                <td><?php echo $display_data['first_name'] ?></td>
-                                                <td><?php echo $display_data['last_name'] ?></td>
+                                                <td><?php echo $display_data['username'] ?></td>
                                                 <td><?php echo $display_data['email'] ?></td>
-                                                <td><?php echo $display_data['bookPlace'] ?></td>
-                                                <td><?php echo $display_data['start_date'] ?></td>
-                                                <td><?php echo $display_data['end_date'] ?></td>
-                                                <td><?php echo $display_data['bookPrice'] ?></td>
-                                                <td><?php echo $display_data['people'] ?></td>
-                                                <td><a href="../CRUD/deleteTourBook.php?del_id=<?php echo $display_data['id'] ?>" data-toggle="modal" data-target="#tourBookingModal"><i class="fa-solid fa-trash"></i></a></td>
+                                                <td><?php echo $display_data['message'] ?></td>
+                                                <td><a href="../CRUD/delete_contact.php?del_id=<?php echo $display_data['id'] ?>" data-toggle="modal" data-target="#deleteRow"><i class="fa-solid fa-trash"></i></a></td>
                                                 <td><a href="update.php?update_id="><i class="fas fa-edit"></i></a></td>
                                             </tr>
                                         <?php
@@ -224,17 +212,20 @@
                 </div>
             </footer>
             <!-- End of Footer -->
+
         </div>
         <!-- End of Content Wrapper -->
+
     </div>
     <!-- End of Page Wrapper -->
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -251,10 +242,8 @@
             </div>
         </div>
     </div>
-    
     <!-- Delete Modal -->
-    <div class="modal fade" id="tourBookingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="deleteRow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -263,23 +252,21 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Kung delete mo ni basi mag hinulsol ka ha</div>
+                <div class="modal-body">Kung delete mo ni basi mag hinuslsol ka ha</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <?php 
-                        $query = "SELECT * FROM bookplace";
-                        $table_tour_data = mysqli_query($conn, $query);
-                        $display_data = mysqli_fetch_array($table_tour_data);
-
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    <?php
+                        $query = "SELECT * FROM contact";
+                        $table_data = mysqli_query($conn, $query);
+                        $disp_data = mysqli_fetch_array($table_data);
                         ?>
-                            <a href="../CRUD/deleteTourBook.php?del_id=<?php echo $display_data['id']?>" class="btn btn-primary">Yes</a>
+                            <a class="btn btn-primary" href="../CRUD/delete_contact.php?del_id=<?php echo $disp_data['id'] ?>">Yes</a>
                         <?php
                     ?>
                 </div>
             </div>
         </div>
     </div>
-    
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -289,6 +276,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
 </body>
 
 </html>
