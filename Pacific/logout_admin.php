@@ -3,7 +3,7 @@
     session_destroy();
 
     if(empty($_SESSION)){
-        header("Location: ../admin.php");
+        header("Location: ../Pacific/admin.php");
     }
 ?>
 

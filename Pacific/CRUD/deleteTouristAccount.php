@@ -6,6 +6,6 @@
     $query = mysqli_query($conn, "DELETE FROM tourist_account WHERE id = '$del_id'");
 
     if($query == true){
-        header("Location: ../Admin Dashboard/index.php");
+        header("Location: ../AdminDashboard/index.php");
     }
 ?>

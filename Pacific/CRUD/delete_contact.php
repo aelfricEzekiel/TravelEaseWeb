@@ -7,7 +7,7 @@
     $del_row = mysqli_query($conn, $query);
     
     if($del_row == true){
-        header("Location: ../Admin Dashboard/contact.php");
+        header("Location: ../AdminDashboard/contact.php");
     }
 
 ?>

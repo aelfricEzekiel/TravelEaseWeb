@@ -186,7 +186,7 @@
         if($check >= 1){
             $_SESSION['email'] = $email;
             
-            header("Location: Admin Dashboard/index.php");
+            header("Location: AdminDashboard/index.php");
         } else {
             header("Location: admin.php");
         }

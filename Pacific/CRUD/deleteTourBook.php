@@ -7,6 +7,6 @@
     $delete_data = mysqli_query($conn, $query);
 
     if($delete_data == true ){
-        header("Location: ../Admin Dashboard/tourBooking.php");
+        header("Location: ../AdminDashboard/tourBooking.php");
     } 
 ?>
