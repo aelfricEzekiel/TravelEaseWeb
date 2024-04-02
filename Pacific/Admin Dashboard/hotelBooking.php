@@ -265,9 +265,9 @@ if (empty($_SESSION)) {
                     <?php
                         $query = "SELECT * FROM book_hotel";
                         $table_data = mysqli_query($conn, $query);
-                        $display_data = mysqli_fetch_array($table_data)
+                        $disp_dta = mysqli_fetch_array($table_data)
                         ?>
-                            <a class="btn btn-primary" href="../CRUD/deleteHotelBook.php?del_id=<?php echo $display_data['id'] ?>">Yes</a>
+                            <a class="btn btn-primary" href="../CRUD/deleteHotelBook.php?del_id=<?php echo $disp_dta['id']; ?>">Yes</a>
                         <?php
                     ?>
                 </div>

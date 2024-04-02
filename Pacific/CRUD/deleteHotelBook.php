@@ -9,5 +9,5 @@
     if($delete_data == true){
         header("Location: ../Admin Dashboard/hotelBooking.php");
         exit();
-    }
+    } 
 ?>

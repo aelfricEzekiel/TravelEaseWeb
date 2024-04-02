@@ -9,5 +9,5 @@
 
 <script>
     alert("Succesfully logout!");
-    window.location.href="admin.php";
+    window.location.href="login.php";
 </script>

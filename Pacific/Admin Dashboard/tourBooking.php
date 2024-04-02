@@ -202,8 +202,8 @@
                                                 <td><?php echo $display_data['end_date'] ?></td>
                                                 <td><?php echo $display_data['bookPrice'] ?></td>
                                                 <td><?php echo $display_data['people'] ?></td>
-                                                <td><a href="../CRUD/deleteTourBook.php?del_id=<?php echo $display_data['id'] ?>" data-toggle="modal" data-target="#tourBookingModal"><i class="fa-solid fa-trash"></i></a></td>
-                                                <td><a href="update.php?update_id="><i class="fas fa-edit"></i></a></td>
+                                                <td><a href="../CRUD/deleteTourBook.php?del_id=<?php echo $display_data['id']; ?>" data-toggle="modal" data-target="#tourBookingModal"><i class="fa-solid fa-trash"></i></a></td>
+                                                <td><a href="update.php?update_id=<?php ?>"><i class="fas fa-edit"></i></a></td>
                                             </tr>
                                         <?php
                                     }
@@ -272,7 +272,7 @@
                         $display_data = mysqli_fetch_array($table_tour_data);
 
                         ?>
-                            <a href="../CRUD/deleteTourBook.php?del_id=<?php echo $display_data['id']?>" class="btn btn-primary">Yes</a>
+                            <a href="../CRUD/deleteTourBook.php?del_id=<?php echo $display_data['id']; ?>" class="btn btn-primary">Yes</a>
                         <?php
                     ?>
                 </div>
